@@ -1,0 +1,98 @@
+{
+  "python_version": "3.15.2",
+  "git_version": "git version 2.54.0 (Apple Git-157)",
+  "inputs": {
+    "branch": "main",
+    "author": "Course Student",
+    "email": "student@example.invalid",
+    "commit_A": "Create notes.txt containing \"alpha\\n\"",
+    "commit_B": "Append \"beta\\n\" to notes.txt",
+    "topic": "Create topic at commit B",
+    "commit_C": "Create todo.txt containing \"one\\n\""
+  },
+  "runs": [
+    {
+      "run": 1,
+      "expected": {
+        "current_branch": "main",
+        "main": "aca95eef3dbdf8075b5c4424d6760a510f5c0aed",
+        "topic": "e5df735815d90a1f4f87828a3f671a66645f255f",
+        "parent_of_B": "f3a30c72d20b2106bce493b7e7a61974debb4325",
+        "parent_of_C": "e5df735815d90a1f4f87828a3f671a66645f255f",
+        "notes.txt": "alpha\nbeta\n",
+        "todo.txt": "one\n",
+        "status": "## main",
+        "staged_files": "",
+        "commit_subjects": [
+          "A: add alpha",
+          "B: append beta",
+          "C: add todo"
+        ]
+      },
+      "actual": {
+        "current_branch": "main",
+        "main": "aca95eef3dbdf8075b5c4424d6760a510f5c0aed",
+        "topic": "e5df735815d90a1f4f87828a3f671a66645f255f",
+        "parent_of_B": "f3a30c72d20b2106bce493b7e7a61974debb4325",
+        "parent_of_C": "e5df735815d90a1f4f87828a3f671a66645f255f",
+        "notes.txt": "alpha\nbeta\n",
+        "todo.txt": "one\n",
+        "status": "## main",
+        "staged_files": "",
+        "commit_subjects": [
+          "A: add alpha",
+          "B: append beta",
+          "C: add todo"
+        ]
+      },
+      "object_ids": {
+        "A": "f3a30c72d20b2106bce493b7e7a61974debb4325",
+        "B": "e5df735815d90a1f4f87828a3f671a66645f255f",
+        "C": "aca95eef3dbdf8075b5c4424d6760a510f5c0aed"
+      },
+      "graph": "aca95ee (HEAD -> main) C: add todo\ne5df735 (topic) B: append beta\nf3a30c7 A: add alpha"
+    },
+    {
+      "run": 2,
+      "expected": {
+        "current_branch": "main",
+        "main": "aca95eef3dbdf8075b5c4424d6760a510f5c0aed",
+        "topic": "e5df735815d90a1f4f87828a3f671a66645f255f",
+        "parent_of_B": "f3a30c72d20b2106bce493b7e7a61974debb4325",
+        "parent_of_C": "e5df735815d90a1f4f87828a3f671a66645f255f",
+        "notes.txt": "alpha\nbeta\n",
+        "todo.txt": "one\n",
+        "status": "## main",
+        "staged_files": "",
+        "commit_subjects": [
+          "A: add alpha",
+          "B: append beta",
+          "C: add todo"
+        ]
+      },
+      "actual": {
+        "current_branch": "main",
+        "main": "aca95eef3dbdf8075b5c4424d6760a510f5c0aed",
+        "topic": "e5df735815d90a1f4f87828a3f671a66645f255f",
+        "parent_of_B": "f3a30c72d20b2106bce493b7e7a61974debb4325",
+        "parent_of_C": "e5df735815d90a1f4f87828a3f671a66645f255f",
+        "notes.txt": "alpha\nbeta\n",
+        "todo.txt": "one\n",
+        "status": "## main",
+        "staged_files": "",
+        "commit_subjects": [
+          "A: add alpha",
+          "B: append beta",
+          "C: add todo"
+        ]
+      },
+      "object_ids": {
+        "A": "f3a30c72d20b2106bce493b7e7a61974debb4325",
+        "B": "e5df735815d90a1f4f87828a3f671a66645f255f",
+        "C": "aca95eef3dbdf8075b5c4424d6760a510f5c0aed"
+      },
+      "graph": "aca95ee (HEAD -> main) C: add todo\ne5df735 (topic) B: append beta\nf3a30c7 A: add alpha"
+    }
+  ],
+  "result": "PASS"
+}
