@@ -1,0 +1,40 @@
+{
+  "task": "R31-T032",
+  "scenario": {
+    "commits": {
+      "A": "77c92311a8712a5d8fee1fcd45d56e401fa5c049",
+      "B": "36cdabc243cb78098903d2e916ff77d0fb3436f2",
+      "C": "88b9166012f831c1314f941254768e04259682b6"
+    },
+    "branches": {
+      "main": "88b9166012f831c1314f941254768e04259682b6",
+      "topic": "36cdabc243cb78098903d2e916ff77d0fb3436f2"
+    },
+    "remote": "local bare repository using file://",
+    "fetch_refspec": "+refs/heads/*:refs/remotes/origin/*"
+  },
+  "expected_results": {
+    "after_remote_add": "No remote-tracking refs created",
+    "after_fetch": {
+      "origin/main": "88b9166012f831c1314f941254768e04259682b6",
+      "origin/topic": "36cdabc243cb78098903d2e916ff77d0fb3436f2"
+    },
+    "local_branches_unchanged": true,
+    "head_unchanged": true,
+    "index_unchanged": true,
+    "working_tree_clean": true
+  },
+  "actual_results": {
+    "origin/main": "88b9166012f831c1314f941254768e04259682b6",
+    "origin/topic": "36cdabc243cb78098903d2e916ff77d0fb3436f2",
+    "head": "refs/heads/main",
+    "main": "88b9166012f831c1314f941254768e04259682b6",
+    "topic": "36cdabc243cb78098903d2e916ff77d0fb3436f2",
+    "working_tree": ""
+  },
+  "tool_versions": {
+    "python": "3.15.2",
+    "git": "git version 2.54.0 (Apple Git-157)"
+  },
+  "result": "PASS"
+}
