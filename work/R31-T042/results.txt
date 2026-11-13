@@ -1,0 +1,148 @@
+Tools: git version 2.55.0; Python 3.14.6
+
+no .git before init
+  expected: False
+  actual:   False
+.git directory created
+  expected: True
+  actual:   True
+HEAD is a symbolic ref to main
+  expected: 'refs/heads/main'
+  actual:   'refs/heads/main'
+no branch refs yet (unborn branch)
+  expected: ''
+  actual:   ''
+HEAD does not resolve to a commit
+  expected: True
+  actual:   True
+index is empty
+  expected: ''
+  actual:   ''
+status is clean
+  expected: ''
+  actual:   ''
+A: untracked (working tree only)
+  expected: '?? notes.txt'
+  actual:   '?? notes.txt'
+A: staged (index)
+  expected: 'A  notes.txt'
+  actual:   'A  notes.txt'
+A: branch ref main now equals HEAD
+  expected: '8204aa20b8df3f581f0a73da9190e62d5cfbeba5'
+  actual:   '8204aa20b8df3f581f0a73da9190e62d5cfbeba5'
+A is a root commit (no parent)
+  expected: True
+  actual:   True
+B: modified in working tree only
+  expected: ' M notes.txt'
+  actual:   ' M notes.txt'
+B's parent is A
+  expected: '8204aa20b8df3f581f0a73da9190e62d5cfbeba5'
+  actual:   '8204aa20b8df3f581f0a73da9190e62d5cfbeba5'
+C: untracked (working tree only)
+  expected: '?? todo.txt'
+  actual:   '?? todo.txt'
+C: staged (index)
+  expected: 'A  todo.txt'
+  actual:   'A  todo.txt'
+C's parent is B
+  expected: '7fdf7044d290cdc97f310ad7db30a92bce19f99e'
+  actual:   '7fdf7044d290cdc97f310ad7db30a92bce19f99e'
+3 commits in history
+  expected: '3'
+  actual:   '3'
+topic points at B
+  expected: '7fdf7044d290cdc97f310ad7db30a92bce19f99e'
+  actual:   '7fdf7044d290cdc97f310ad7db30a92bce19f99e'
+main points at C
+  expected: 'c56ce4fad84240f563e7939da675454749efbfdd'
+  actual:   'c56ce4fad84240f563e7939da675454749efbfdd'
+HEAD still follows main
+  expected: 'refs/heads/main'
+  actual:   'refs/heads/main'
+files in HEAD tree
+  expected: 'notes.txt\ntodo.txt'
+  actual:   'notes.txt\ntodo.txt'
+final status is clean
+  expected: ''
+  actual:   ''
+
+DIAGRAM
+ refs:           HEAD -> main (c56ce4f)    topic (7fdf704)
+ history:        8204aa2 <- 7fdf704 <- c56ce4f
+ index (staged): notes.txt, todo.txt
+ working tree:   notes.txt, todo.txt  (matches index and HEAD)
+
+no .git before init
+  expected: False
+  actual:   False
+.git directory created
+  expected: True
+  actual:   True
+HEAD is a symbolic ref to main
+  expected: 'refs/heads/main'
+  actual:   'refs/heads/main'
+no branch refs yet (unborn branch)
+  expected: ''
+  actual:   ''
+HEAD does not resolve to a commit
+  expected: True
+  actual:   True
+index is empty
+  expected: ''
+  actual:   ''
+status is clean
+  expected: ''
+  actual:   ''
+A: untracked (working tree only)
+  expected: '?? notes.txt'
+  actual:   '?? notes.txt'
+A: staged (index)
+  expected: 'A  notes.txt'
+  actual:   'A  notes.txt'
+A: branch ref main now equals HEAD
+  expected: '8204aa20b8df3f581f0a73da9190e62d5cfbeba5'
+  actual:   '8204aa20b8df3f581f0a73da9190e62d5cfbeba5'
+A is a root commit (no parent)
+  expected: True
+  actual:   True
+B: modified in working tree only
+  expected: ' M notes.txt'
+  actual:   ' M notes.txt'
+B's parent is A
+  expected: '8204aa20b8df3f581f0a73da9190e62d5cfbeba5'
+  actual:   '8204aa20b8df3f581f0a73da9190e62d5cfbeba5'
+C: untracked (working tree only)
+  expected: '?? todo.txt'
+  actual:   '?? todo.txt'
+C: staged (index)
+  expected: 'A  todo.txt'
+  actual:   'A  todo.txt'
+C's parent is B
+  expected: '7fdf7044d290cdc97f310ad7db30a92bce19f99e'
+  actual:   '7fdf7044d290cdc97f310ad7db30a92bce19f99e'
+3 commits in history
+  expected: '3'
+  actual:   '3'
+topic points at B
+  expected: '7fdf7044d290cdc97f310ad7db30a92bce19f99e'
+  actual:   '7fdf7044d290cdc97f310ad7db30a92bce19f99e'
+main points at C
+  expected: 'c56ce4fad84240f563e7939da675454749efbfdd'
+  actual:   'c56ce4fad84240f563e7939da675454749efbfdd'
+HEAD still follows main
+  expected: 'refs/heads/main'
+  actual:   'refs/heads/main'
+files in HEAD tree
+  expected: 'notes.txt\ntodo.txt'
+  actual:   'notes.txt\ntodo.txt'
+final status is clean
+  expected: ''
+  actual:   ''
+
+DIAGRAM
+ refs:           HEAD -> main (c56ce4f)    topic (7fdf704)
+ history:        8204aa2 <- 7fdf704 <- c56ce4f
+ index (staged): notes.txt, todo.txt
+ working tree:   notes.txt, todo.txt  (matches index and HEAD)
+
