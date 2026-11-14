@@ -1,0 +1,134 @@
+Tools: git version 2.55.0; Python 3.14.6
+
+remote is a local file:// URL
+  expected: True
+  actual:   True
+server main is C
+  expected: 'e41a071497f2561950889c039665667fa32e7162'
+  actual:   'e41a071497f2561950889c039665667fa32e7162'
+server topic is B
+  expected: '6d4996476333afd1491d9175595de8f34096c922'
+  actual:   '6d4996476333afd1491d9175595de8f34096c922'
+git remote add wrote the URL
+  expected: 'file:///var/folders/ty/l1twv5r90g54g2zp10112txr0000gn/T/tmpy380pq4a/server.git'
+  actual:   'file:///var/folders/ty/l1twv5r90g54g2zp10112txr0000gn/T/tmpy380pq4a/server.git'
+git remote add wrote the DEFAULT fetch refspec (refs/heads/* -> refs/remotes/origin/*)
+  expected: '+refs/heads/*:refs/remotes/origin/*'
+  actual:   '+refs/heads/*:refs/remotes/origin/*'
+no remote-tracking refs exist yet
+  expected: ''
+  actual:   ''
+BAD CASE: `git log origin/main` exits non-zero (command not applicable yet)
+  expected: True
+  actual:   True
+BAD CASE: it printed no commits
+  expected: ''
+  actual:   ''
+BAD CASE: origin/main cannot be resolved
+  expected: True
+  actual:   True
+failing command changed nothing: local main still C
+  expected: 'e41a071497f2561950889c039665667fa32e7162'
+  actual:   'e41a071497f2561950889c039665667fa32e7162'
+failing command changed nothing: local topic still B
+  expected: '6d4996476333afd1491d9175595de8f34096c922'
+  actual:   '6d4996476333afd1491d9175595de8f34096c922'
+REPAIR: git fetch origin succeeds (exit 0)
+  expected: 0
+  actual:   0
+fetch wrote refs/remotes/origin/main = server's main
+  expected: 'e41a071497f2561950889c039665667fa32e7162'
+  actual:   'e41a071497f2561950889c039665667fa32e7162'
+fetch wrote refs/remotes/origin/topic = server's topic
+  expected: '6d4996476333afd1491d9175595de8f34096c922'
+  actual:   '6d4996476333afd1491d9175595de8f34096c922'
+origin/main and origin/topic exist as remote-tracking refs
+  expected: True
+  actual:   True
+no other branch refs appeared (newer Git may also add origin/HEAD, which is fine)
+  expected: {'refs/remotes/origin/topic', 'refs/remotes/origin/main'}
+  actual:   {'refs/remotes/origin/topic', 'refs/remotes/origin/main'}
+REPAIRED: `git log origin/main` now succeeds (exit 0)
+  expected: 0
+  actual:   0
+REPAIRED: it lists C, B, A
+  expected: 'C\nB\nA'
+  actual:   'C\nB\nA'
+local main untouched by fetch
+  expected: 'e41a071497f2561950889c039665667fa32e7162'
+  actual:   'e41a071497f2561950889c039665667fa32e7162'
+local topic untouched by fetch
+  expected: '6d4996476333afd1491d9175595de8f34096c922'
+  actual:   '6d4996476333afd1491d9175595de8f34096c922'
+HEAD still on main
+  expected: 'main'
+  actual:   'main'
+working tree clean
+  expected: ''
+  actual:   ''
+remote is a local file:// URL
+  expected: True
+  actual:   True
+server main is C
+  expected: 'd38c6ae4e5ba61c8a2eed520e471c7f3036b319c'
+  actual:   'd38c6ae4e5ba61c8a2eed520e471c7f3036b319c'
+server topic is B
+  expected: 'a43d5c4215a9fafb066edb6db3da96602f6a38d4'
+  actual:   'a43d5c4215a9fafb066edb6db3da96602f6a38d4'
+git remote add wrote the URL
+  expected: 'file:///var/folders/ty/l1twv5r90g54g2zp10112txr0000gn/T/tmpsomr1t1b/server.git'
+  actual:   'file:///var/folders/ty/l1twv5r90g54g2zp10112txr0000gn/T/tmpsomr1t1b/server.git'
+git remote add wrote the DEFAULT fetch refspec (refs/heads/* -> refs/remotes/origin/*)
+  expected: '+refs/heads/*:refs/remotes/origin/*'
+  actual:   '+refs/heads/*:refs/remotes/origin/*'
+no remote-tracking refs exist yet
+  expected: ''
+  actual:   ''
+BAD CASE: `git log origin/main` exits non-zero (command not applicable yet)
+  expected: True
+  actual:   True
+BAD CASE: it printed no commits
+  expected: ''
+  actual:   ''
+BAD CASE: origin/main cannot be resolved
+  expected: True
+  actual:   True
+failing command changed nothing: local main still C
+  expected: 'd38c6ae4e5ba61c8a2eed520e471c7f3036b319c'
+  actual:   'd38c6ae4e5ba61c8a2eed520e471c7f3036b319c'
+failing command changed nothing: local topic still B
+  expected: 'a43d5c4215a9fafb066edb6db3da96602f6a38d4'
+  actual:   'a43d5c4215a9fafb066edb6db3da96602f6a38d4'
+REPAIR: git fetch origin succeeds (exit 0)
+  expected: 0
+  actual:   0
+fetch wrote refs/remotes/origin/main = server's main
+  expected: 'd38c6ae4e5ba61c8a2eed520e471c7f3036b319c'
+  actual:   'd38c6ae4e5ba61c8a2eed520e471c7f3036b319c'
+fetch wrote refs/remotes/origin/topic = server's topic
+  expected: 'a43d5c4215a9fafb066edb6db3da96602f6a38d4'
+  actual:   'a43d5c4215a9fafb066edb6db3da96602f6a38d4'
+origin/main and origin/topic exist as remote-tracking refs
+  expected: True
+  actual:   True
+no other branch refs appeared (newer Git may also add origin/HEAD, which is fine)
+  expected: {'refs/remotes/origin/topic', 'refs/remotes/origin/main'}
+  actual:   {'refs/remotes/origin/topic', 'refs/remotes/origin/main'}
+REPAIRED: `git log origin/main` now succeeds (exit 0)
+  expected: 0
+  actual:   0
+REPAIRED: it lists C, B, A
+  expected: 'C\nB\nA'
+  actual:   'C\nB\nA'
+local main untouched by fetch
+  expected: 'd38c6ae4e5ba61c8a2eed520e471c7f3036b319c'
+  actual:   'd38c6ae4e5ba61c8a2eed520e471c7f3036b319c'
+local topic untouched by fetch
+  expected: 'a43d5c4215a9fafb066edb6db3da96602f6a38d4'
+  actual:   'a43d5c4215a9fafb066edb6db3da96602f6a38d4'
+HEAD still on main
+  expected: 'main'
+  actual:   'main'
+working tree clean
+  expected: ''
+  actual:   ''
