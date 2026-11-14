@@ -1,0 +1,134 @@
+Tools: git version 2.55.0; Python 3.14.6
+
+fixtures: HEAD trees identical
+  expected: '70d571a7a75867c09d38254b1252d5e2402adaa6'
+  actual:   '70d571a7a75867c09d38254b1252d5e2402adaa6'
+fixtures: status identical
+  expected: 'A  new.txt\n M notes.txt\n?? scratch.txt'
+  actual:   'A  new.txt\n M notes.txt\n?? scratch.txt'
+fixture status is: edit unstaged, new.txt staged, scratch.txt untracked
+  expected: 'A  new.txt\n M notes.txt\n?? scratch.txt'
+  actual:   'A  new.txt\n M notes.txt\n?? scratch.txt'
+[commit] main advanced by one commit (parent is old main)
+  expected: 'bc353a194053dcd94abf2b762d68d79717673d8c'
+  actual:   'bc353a194053dcd94abf2b762d68d79717673d8c'
+[commit] topic did not move (still at B)
+  expected: 'f100bd6d565ced2af48f01fb2f73484d70e764e1'
+  actual:   'f100bd6d565ced2af48f01fb2f73484d70e764e1'
+[commit] new.txt (staged) is in the commit
+  expected: 'new'
+  actual:   'new'
+[commit] untracked scratch.txt is NOT in the commit
+  expected: False
+  actual:   False
+[commit] scratch.txt still untracked
+  expected: '?? scratch.txt'
+  actual:   '?? scratch.txt'
+[commit -a] main advanced by one commit (parent is old main)
+  expected: 'bc353a194053dcd94abf2b762d68d79717673d8c'
+  actual:   'bc353a194053dcd94abf2b762d68d79717673d8c'
+[commit -a] topic did not move (still at B)
+  expected: 'f100bd6d565ced2af48f01fb2f73484d70e764e1'
+  actual:   'f100bd6d565ced2af48f01fb2f73484d70e764e1'
+[commit -a] new.txt (staged) is in the commit
+  expected: 'new'
+  actual:   'new'
+[commit -a] untracked scratch.txt is NOT in the commit
+  expected: False
+  actual:   False
+[commit -a] scratch.txt still untracked
+  expected: '?? scratch.txt'
+  actual:   '?? scratch.txt'
+[commit] notes.txt in the commit is still the OLD content
+  expected: 'alpha\nbeta'
+  actual:   'alpha\nbeta'
+[commit -a] notes.txt in the commit has the NEW content (gamma)
+  expected: 'alpha\nbeta\ngamma'
+  actual:   'alpha\nbeta\ngamma'
+[commit] edit is left behind: status shows notes.txt modified + scratch untracked
+  expected: ' M notes.txt\n?? scratch.txt'
+  actual:   ' M notes.txt\n?? scratch.txt'
+[commit -a] edit was committed: only scratch.txt remains
+  expected: '?? scratch.txt'
+  actual:   '?? scratch.txt'
+[commit] unstaged diff still lists notes.txt
+  expected: 'notes.txt'
+  actual:   'notes.txt'
+[commit -a] unstaged diff is empty
+  expected: ''
+  actual:   ''
+the two commits have DIFFERENT trees
+  expected: True
+  actual:   True
+but todo.txt is the same object in both (only notes.txt differs)
+  expected: '5626abf0f72e58d7a153368ba57db4c673c0e171'
+  actual:   '5626abf0f72e58d7a153368ba57db4c673c0e171'
+notes.txt is stored as a DIFFERENT object in the two commits
+  expected: True
+  actual:   True
+fixtures: HEAD trees identical
+  expected: '70d571a7a75867c09d38254b1252d5e2402adaa6'
+  actual:   '70d571a7a75867c09d38254b1252d5e2402adaa6'
+fixtures: status identical
+  expected: 'A  new.txt\n M notes.txt\n?? scratch.txt'
+  actual:   'A  new.txt\n M notes.txt\n?? scratch.txt'
+fixture status is: edit unstaged, new.txt staged, scratch.txt untracked
+  expected: 'A  new.txt\n M notes.txt\n?? scratch.txt'
+  actual:   'A  new.txt\n M notes.txt\n?? scratch.txt'
+[commit] main advanced by one commit (parent is old main)
+  expected: 'bc353a194053dcd94abf2b762d68d79717673d8c'
+  actual:   'bc353a194053dcd94abf2b762d68d79717673d8c'
+[commit] topic did not move (still at B)
+  expected: 'f100bd6d565ced2af48f01fb2f73484d70e764e1'
+  actual:   'f100bd6d565ced2af48f01fb2f73484d70e764e1'
+[commit] new.txt (staged) is in the commit
+  expected: 'new'
+  actual:   'new'
+[commit] untracked scratch.txt is NOT in the commit
+  expected: False
+  actual:   False
+[commit] scratch.txt still untracked
+  expected: '?? scratch.txt'
+  actual:   '?? scratch.txt'
+[commit -a] main advanced by one commit (parent is old main)
+  expected: 'bc353a194053dcd94abf2b762d68d79717673d8c'
+  actual:   'bc353a194053dcd94abf2b762d68d79717673d8c'
+[commit -a] topic did not move (still at B)
+  expected: 'f100bd6d565ced2af48f01fb2f73484d70e764e1'
+  actual:   'f100bd6d565ced2af48f01fb2f73484d70e764e1'
+[commit -a] new.txt (staged) is in the commit
+  expected: 'new'
+  actual:   'new'
+[commit -a] untracked scratch.txt is NOT in the commit
+  expected: False
+  actual:   False
+[commit -a] scratch.txt still untracked
+  expected: '?? scratch.txt'
+  actual:   '?? scratch.txt'
+[commit] notes.txt in the commit is still the OLD content
+  expected: 'alpha\nbeta'
+  actual:   'alpha\nbeta'
+[commit -a] notes.txt in the commit has the NEW content (gamma)
+  expected: 'alpha\nbeta\ngamma'
+  actual:   'alpha\nbeta\ngamma'
+[commit] edit is left behind: status shows notes.txt modified + scratch untracked
+  expected: ' M notes.txt\n?? scratch.txt'
+  actual:   ' M notes.txt\n?? scratch.txt'
+[commit -a] edit was committed: only scratch.txt remains
+  expected: '?? scratch.txt'
+  actual:   '?? scratch.txt'
+[commit] unstaged diff still lists notes.txt
+  expected: 'notes.txt'
+  actual:   'notes.txt'
+[commit -a] unstaged diff is empty
+  expected: ''
+  actual:   ''
+the two commits have DIFFERENT trees
+  expected: True
+  actual:   True
+but todo.txt is the same object in both (only notes.txt differs)
+  expected: '5626abf0f72e58d7a153368ba57db4c673c0e171'
+  actual:   '5626abf0f72e58d7a153368ba57db4c673c0e171'
+notes.txt is stored as a DIFFERENT object in the two commits
+  expected: True
+  actual:   True
