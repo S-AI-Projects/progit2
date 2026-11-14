@@ -1,0 +1,5 @@
+topic points to commit B
+recovered tree matches the saved tree hash
+notes.txt contains alpha and beta
+todo.txt is absent on recovered topic
+topic tracks origin/topic and working tree is clean

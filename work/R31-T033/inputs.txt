@@ -1,0 +1,8 @@
+Temporary repository: main
+Author: Course Student
+Email: student@example.invalid
+Commit A: notes.txt contains alpha\n
+Commit B: append beta\n to notes.txt
+Commit C: todo.txt contains one\n
+Branch topic is created at commit B.
+A local bare remote is used.

@@ -1,0 +1,5 @@
+PASS: topic points to commit B
+PASS: recovered tree matches saved tree hash
+PASS: notes.txt contains alpha and beta
+PASS: todo.txt is absent on recovered topic
+PASS: topic tracks origin/topic and working tree is clean

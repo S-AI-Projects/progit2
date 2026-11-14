@@ -1,0 +1,6 @@
+A: e1ef8d77f1f96a9c02716448fa2675aeb27184c3
+B: f4f15b219d4952c7ad50351aaa3516723d70488d
+C: 1f31f82488de877a9fc069b1f959bf99db8e937c
+Saved tree: f85b72cccab2aab0cfca333f78ab1ff302be5f7b
+Recovered commit: f4f15b219d4952c7ad50351aaa3516723d70488d
+Recovered tree: f85b72cccab2aab0cfca333f78ab1ff302be5f7b
