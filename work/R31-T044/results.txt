@@ -1,0 +1,122 @@
+Tools: git version 2.55.0; Python 3.14.6
+
+submodule remote is a local file:// URL
+  expected: True
+  actual:   True
+current branch is topic
+  expected: 'topic'
+  actual:   'topic'
+main is at C before
+  expected: '9bacce053d7d81c43fc566eb910d896131231afa'
+  actual:   '9bacce053d7d81c43fc566eb910d896131231afa'
+topic is at B before
+  expected: '30ed9a49babb6c3b752a1337369ce56750b441bb'
+  actual:   '30ed9a49babb6c3b752a1337369ce56750b441bb'
+add only stages: HEAD of topic did not move yet
+  expected: '30ed9a49babb6c3b752a1337369ce56750b441bb'
+  actual:   '30ed9a49babb6c3b752a1337369ce56750b441bb'
+main (unrelated ref) did not move
+  expected: '9bacce053d7d81c43fc566eb910d896131231afa'
+  actual:   '9bacce053d7d81c43fc566eb910d896131231afa'
+still on topic
+  expected: 'topic'
+  actual:   'topic'
+status shows .gitmodules and the submodule staged
+  expected: 'A  .gitmodules\nA  libs/sub'
+  actual:   'A  .gitmodules\nA  libs/sub'
+index stores libs/sub as a gitlink (mode 160000)
+  expected: '160000'
+  actual:   '160000'
+gitlink points at the submodule's commit
+  expected: 'e939706b39146dc70a188e4ded697e64a8d311a2'
+  actual:   'e939706b39146dc70a188e4ded697e64a8d311a2'
+.gitmodules records the local URL
+  expected: 'file:///var/folders/ty/l1twv5r90g54g2zp10112txr0000gn/T/tmpq2198922/sub.git'
+  actual:   'file:///var/folders/ty/l1twv5r90g54g2zp10112txr0000gn/T/tmpq2198922/sub.git'
+.gitmodules records no branch (none requested)
+  expected: True
+  actual:   True
+submodule's origin is the local bare repo
+  expected: 'file:///var/folders/ty/l1twv5r90g54g2zp10112txr0000gn/T/tmpq2198922/sub.git'
+  actual:   'file:///var/folders/ty/l1twv5r90g54g2zp10112txr0000gn/T/tmpq2198922/sub.git'
+submodule checked out the REMOTE's default branch (main), not 'topic'
+  expected: 'main'
+  actual:   'main'
+topic advanced (intended ref changed)
+  expected: True
+  actual:   True
+topic's parent is B
+  expected: '30ed9a49babb6c3b752a1337369ce56750b441bb'
+  actual:   '30ed9a49babb6c3b752a1337369ce56750b441bb'
+main still at C (unrelated ref fixed)
+  expected: '9bacce053d7d81c43fc566eb910d896131231afa'
+  actual:   '9bacce053d7d81c43fc566eb910d896131231afa'
+main's tree has no .gitmodules
+  expected: False
+  actual:   False
+topic's tree has .gitmodules
+  expected: True
+  actual:   True
+status clean after commit
+  expected: ''
+  actual:   ''
+submodule remote is a local file:// URL
+  expected: True
+  actual:   True
+current branch is topic
+  expected: 'topic'
+  actual:   'topic'
+main is at C before
+  expected: '5e804adc4037c8e1ec115ddbba93dcbceade38dc'
+  actual:   '5e804adc4037c8e1ec115ddbba93dcbceade38dc'
+topic is at B before
+  expected: 'ebd1b9effc5af1abb1ee150c1d4ea9e868c29fd1'
+  actual:   'ebd1b9effc5af1abb1ee150c1d4ea9e868c29fd1'
+add only stages: HEAD of topic did not move yet
+  expected: 'ebd1b9effc5af1abb1ee150c1d4ea9e868c29fd1'
+  actual:   'ebd1b9effc5af1abb1ee150c1d4ea9e868c29fd1'
+main (unrelated ref) did not move
+  expected: '5e804adc4037c8e1ec115ddbba93dcbceade38dc'
+  actual:   '5e804adc4037c8e1ec115ddbba93dcbceade38dc'
+still on topic
+  expected: 'topic'
+  actual:   'topic'
+status shows .gitmodules and the submodule staged
+  expected: 'A  .gitmodules\nA  libs/sub'
+  actual:   'A  .gitmodules\nA  libs/sub'
+index stores libs/sub as a gitlink (mode 160000)
+  expected: '160000'
+  actual:   '160000'
+gitlink points at the submodule's commit
+  expected: '99fdc3d07b5d0809ef047d05c777b8aeba686319'
+  actual:   '99fdc3d07b5d0809ef047d05c777b8aeba686319'
+.gitmodules records the local URL
+  expected: 'file:///var/folders/ty/l1twv5r90g54g2zp10112txr0000gn/T/tmpk_j5_9qm/sub.git'
+  actual:   'file:///var/folders/ty/l1twv5r90g54g2zp10112txr0000gn/T/tmpk_j5_9qm/sub.git'
+.gitmodules records no branch (none requested)
+  expected: True
+  actual:   True
+submodule's origin is the local bare repo
+  expected: 'file:///var/folders/ty/l1twv5r90g54g2zp10112txr0000gn/T/tmpk_j5_9qm/sub.git'
+  actual:   'file:///var/folders/ty/l1twv5r90g54g2zp10112txr0000gn/T/tmpk_j5_9qm/sub.git'
+submodule checked out the REMOTE's default branch (main), not 'topic'
+  expected: 'main'
+  actual:   'main'
+topic advanced (intended ref changed)
+  expected: True
+  actual:   True
+topic's parent is B
+  expected: 'ebd1b9effc5af1abb1ee150c1d4ea9e868c29fd1'
+  actual:   'ebd1b9effc5af1abb1ee150c1d4ea9e868c29fd1'
+main still at C (unrelated ref fixed)
+  expected: '5e804adc4037c8e1ec115ddbba93dcbceade38dc'
+  actual:   '5e804adc4037c8e1ec115ddbba93dcbceade38dc'
+main's tree has no .gitmodules
+  expected: False
+  actual:   False
+topic's tree has .gitmodules
+  expected: True
+  actual:   True
+status clean after commit
+  expected: ''
+  actual:   ''
