@@ -1,0 +1,86 @@
+Tools: git version 2.55.0; Python 3.14.6
+
+uncommitted edit exists
+  expected: ' M notes.txt'
+  actual:   ' M notes.txt'
+mistake: main moved back to B
+  expected: '733194b11fe2c20f44580f82b40e9da53cf0a73a'
+  actual:   '733194b11fe2c20f44580f82b40e9da53cf0a73a'
+mistake: C no longer in history
+  expected: '2'
+  actual:   '2'
+mistake: todo.txt vanished
+  expected: False
+  actual:   False
+mistake: uncommitted edit wiped
+  expected: 'alpha\nbeta\n'
+  actual:   'alpha\nbeta\n'
+commit C object still exists
+  expected: 'commit'
+  actual:   'commit'
+reflog remembers C as HEAD@{1}
+  expected: 'e020f22a154c0e36fc7aecc709c0aa50596aad96'
+  actual:   'e020f22a154c0e36fc7aecc709c0aa50596aad96'
+recovered: main back at C
+  expected: 'e020f22a154c0e36fc7aecc709c0aa50596aad96'
+  actual:   'e020f22a154c0e36fc7aecc709c0aa50596aad96'
+recovered: tree hash matches the saved one
+  expected: '70d571a7a75867c09d38254b1252d5e2402adaa6'
+  actual:   '70d571a7a75867c09d38254b1252d5e2402adaa6'
+recovered: todo.txt content
+  expected: 'one\n'
+  actual:   'one\n'
+recovered: notes.txt content
+  expected: 'alpha\nbeta\n'
+  actual:   'alpha\nbeta\n'
+recovered: working tree clean
+  expected: ''
+  actual:   ''
+NOT recovered: uncommitted 'gamma' edit stays lost
+  expected: False
+  actual:   False
+uncommitted edit exists
+  expected: ' M notes.txt'
+  actual:   ' M notes.txt'
+mistake: main moved back to B
+  expected: '733194b11fe2c20f44580f82b40e9da53cf0a73a'
+  actual:   '733194b11fe2c20f44580f82b40e9da53cf0a73a'
+mistake: C no longer in history
+  expected: '2'
+  actual:   '2'
+mistake: todo.txt vanished
+  expected: False
+  actual:   False
+mistake: uncommitted edit wiped
+  expected: 'alpha\nbeta\n'
+  actual:   'alpha\nbeta\n'
+commit C object still exists
+  expected: 'commit'
+  actual:   'commit'
+reflog remembers C as HEAD@{1}
+  expected: 'e020f22a154c0e36fc7aecc709c0aa50596aad96'
+  actual:   'e020f22a154c0e36fc7aecc709c0aa50596aad96'
+recovered: main back at C
+  expected: 'e020f22a154c0e36fc7aecc709c0aa50596aad96'
+  actual:   'e020f22a154c0e36fc7aecc709c0aa50596aad96'
+recovered: tree hash matches the saved one
+  expected: '70d571a7a75867c09d38254b1252d5e2402adaa6'
+  actual:   '70d571a7a75867c09d38254b1252d5e2402adaa6'
+recovered: todo.txt content
+  expected: 'one\n'
+  actual:   'one\n'
+recovered: notes.txt content
+  expected: 'alpha\nbeta\n'
+  actual:   'alpha\nbeta\n'
+recovered: working tree clean
+  expected: ''
+  actual:   ''
+NOT recovered: uncommitted 'gamma' edit stays lost
+  expected: False
+  actual:   False
+RECOVERY INSTRUCTIONS
+1. Run: git reflog          (find the entry from before the mistake)
+2. Run: git reset --hard HEAD@{1}   (or the exact reflog entry)
+WHAT CANNOT BE RECOVERED BY THIS METHOD:
+- Uncommitted edits to tracked files (they were never saved as a commit, so the reflog has no record).
+- Anything after the reflog entries expire or after git gc prunes unreachable objects.
