@@ -1,0 +1,113 @@
+Tools: git version 2.55.0; Python 3.14.6
+
+remote is a local file:// URL
+  expected: True
+  actual:   True
+server main is C
+  expected: 'a742a68ca9c8443d6dc09694b3b8d1424fa9e1d2'
+  actual:   'a742a68ca9c8443d6dc09694b3b8d1424fa9e1d2'
+server topic is B
+  expected: '69d4d349dea2d83fd9d735e1cc11d3be5deff055'
+  actual:   '69d4d349dea2d83fd9d735e1cc11d3be5deff055'
+`git remote` lists exactly: origin
+  expected: 'origin'
+  actual:   'origin'
+`git remote -v` shows the fetch URL
+  expected: True
+  actual:   True
+`git remote -v` shows the push URL
+  expected: True
+  actual:   True
+clone wrote the default fetch refspec
+  expected: '+refs/heads/*:refs/remotes/origin/*'
+  actual:   '+refs/heads/*:refs/remotes/origin/*'
+origin/main equals the server's main (C)
+  expected: 'a742a68ca9c8443d6dc09694b3b8d1424fa9e1d2'
+  actual:   'a742a68ca9c8443d6dc09694b3b8d1424fa9e1d2'
+origin/topic equals the server's topic (B)
+  expected: '69d4d349dea2d83fd9d735e1cc11d3be5deff055'
+  actual:   '69d4d349dea2d83fd9d735e1cc11d3be5deff055'
+local main tracks origin/main
+  expected: 'origin/main'
+  actual:   'origin/main'
+clone made NO local topic branch (only origin/topic)
+  expected: ''
+  actual:   ''
+checked-out branch is main
+  expected: 'main'
+  actual:   'main'
+working tree clean
+  expected: ''
+  actual:   ''
+temporary directory was cleaned up (run 1)
+  expected: False
+  actual:   False
+remote is a local file:// URL
+  expected: True
+  actual:   True
+server main is C
+  expected: 'a742a68ca9c8443d6dc09694b3b8d1424fa9e1d2'
+  actual:   'a742a68ca9c8443d6dc09694b3b8d1424fa9e1d2'
+server topic is B
+  expected: '69d4d349dea2d83fd9d735e1cc11d3be5deff055'
+  actual:   '69d4d349dea2d83fd9d735e1cc11d3be5deff055'
+`git remote` lists exactly: origin
+  expected: 'origin'
+  actual:   'origin'
+`git remote -v` shows the fetch URL
+  expected: True
+  actual:   True
+`git remote -v` shows the push URL
+  expected: True
+  actual:   True
+clone wrote the default fetch refspec
+  expected: '+refs/heads/*:refs/remotes/origin/*'
+  actual:   '+refs/heads/*:refs/remotes/origin/*'
+origin/main equals the server's main (C)
+  expected: 'a742a68ca9c8443d6dc09694b3b8d1424fa9e1d2'
+  actual:   'a742a68ca9c8443d6dc09694b3b8d1424fa9e1d2'
+origin/topic equals the server's topic (B)
+  expected: '69d4d349dea2d83fd9d735e1cc11d3be5deff055'
+  actual:   '69d4d349dea2d83fd9d735e1cc11d3be5deff055'
+local main tracks origin/main
+  expected: 'origin/main'
+  actual:   'origin/main'
+clone made NO local topic branch (only origin/topic)
+  expected: ''
+  actual:   ''
+checked-out branch is main
+  expected: 'main'
+  actual:   'main'
+working tree clean
+  expected: ''
+  actual:   ''
+temporary directory was cleaned up (run 2)
+  expected: False
+  actual:   False
+each run used its own isolated directory
+  expected: True
+  actual:   True
+a failing child command raises CalledProcessError (non-zero exit propagated)
+  expected: True
+  actual:   True
+remote is a local file:// URL
+  expected: True
+  actual:   True
+server main is C
+  expected: 'a742a68ca9c8443d6dc09694b3b8d1424fa9e1d2'
+  actual:   'a742a68ca9c8443d6dc09694b3b8d1424fa9e1d2'
+server topic is B
+  expected: '69d4d349dea2d83fd9d735e1cc11d3be5deff055'
+  actual:   '69d4d349dea2d83fd9d735e1cc11d3be5deff055'
+`git remote` lists exactly: origin
+  expected: 'origin'
+  actual:   ''
+OMISSION TEST: leaving out `git clone` makes the check FAIL
+  expected: True
+  actual:   True
+PROCESS EXIT: `check.py --omit-clone` exits NON-ZERO
+  expected: True
+  actual:   True
+PROCESS EXIT: and reports an AssertionError
+  expected: True
+  actual:   True
