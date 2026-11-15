@@ -1,0 +1,208 @@
+Tools: git version 2.55.0; Python 3.14.6
+
+EXPLANATION (generated from the real repository state, not typed in)
+1. `git checkout -b whitespace` created the ref refs/heads/whitespace pointing at commit 2b08ac7 and moved HEAD onto it.
+   No object was created. The index and working tree were untouched. main is still 2b08ac7 and topic is still c1a6110.
+2. Converting notes.txt to DOS line endings changed only the WORKING TREE: the file now hashes to blob 17f2fc0,
+   while the index still holds blob fbbee86. `git diff` shows that, but `git diff -b` prints nothing,
+   because the only difference is a carriage return at the end of each line.
+3. `git commit -am` created commit 82606ed (parent 2b08ac7, tree e5bbb29) and moved refs/heads/whitespace from 2b08ac7 to 82606ed.
+   The index now holds blob 17f2fc0, the very blob predicted in step 2 from the file's bytes alone.
+   todo.txt kept blob 5626abf; scratch.txt stayed untracked because -a only stages files Git already tracks.
+   main and topic did not move, so the whitespace-only change exists on one branch only.
+
+core.autocrlf is false in this temp repo
+  predicted: 'false'
+  actual:    'false'
+start: on branch main
+  predicted: 'main'
+  actual:    'main'
+start: working tree clean
+  predicted: ''
+  actual:    ''
+step 1: refs/heads/whitespace was created at C
+  predicted: '2b08ac708f02d757b12fcce8fab072d26a149253'
+  actual:    '2b08ac708f02d757b12fcce8fab072d26a149253'
+step 1: HEAD now points at refs/heads/whitespace
+  predicted: 'refs/heads/whitespace'
+  actual:    'refs/heads/whitespace'
+step 1: main did not move
+  predicted: '2b08ac708f02d757b12fcce8fab072d26a149253'
+  actual:    '2b08ac708f02d757b12fcce8fab072d26a149253'
+step 1: topic did not move
+  predicted: 'c1a61109bfcd6bd9284294efa48a051419516086'
+  actual:    'c1a61109bfcd6bd9284294efa48a051419516086'
+step 1: index is unchanged
+  predicted: '100644 fbbee861521bd5355538b096fa3998541cd33909 0\tnotes.txt\n100644 5626abf0f72e58d7a153368ba57db4c673c0e171 0\ttodo.txt'
+  actual:    '100644 fbbee861521bd5355538b096fa3998541cd33909 0\tnotes.txt\n100644 5626abf0f72e58d7a153368ba57db4c673c0e171 0\ttodo.txt'
+step 1: working tree is still clean
+  predicted: ''
+  actual:    ''
+step 2: status shows notes.txt modified (unstaged) and scratch.txt untracked
+  predicted: ' M notes.txt\n?? scratch.txt'
+  actual:    ' M notes.txt\n?? scratch.txt'
+step 2: the working-tree file hashes to the predicted blob
+  predicted: '17f2fc0a7500e6b218190262d5a329086ba965ff'
+  actual:    '17f2fc0a7500e6b218190262d5a329086ba965ff'
+step 2: the INDEX still holds the old blob
+  predicted: 'fbbee861521bd5355538b096fa3998541cd33909'
+  actual:    'fbbee861521bd5355538b096fa3998541cd33909'
+step 2: refs did not move (whitespace still at C)
+  predicted: '2b08ac708f02d757b12fcce8fab072d26a149253'
+  actual:    '2b08ac708f02d757b12fcce8fab072d26a149253'
+step 2: plain `git diff` lists notes.txt
+  predicted: 'notes.txt'
+  actual:    'notes.txt'
+step 2: `git diff` is NOT empty
+  predicted: True
+  actual:    True
+step 2: `git diff -b` IS empty (only line endings differ)
+  predicted: ''
+  actual:    ''
+step 3: whitespace moved to a NEW commit
+  predicted: True
+  actual:    True
+step 3: the new commit's parent is C
+  predicted: '2b08ac708f02d757b12fcce8fab072d26a149253'
+  actual:    '2b08ac708f02d757b12fcce8fab072d26a149253'
+step 3: HEAD still follows whitespace
+  predicted: 'refs/heads/whitespace'
+  actual:    'refs/heads/whitespace'
+step 3: main did not move
+  predicted: '2b08ac708f02d757b12fcce8fab072d26a149253'
+  actual:    '2b08ac708f02d757b12fcce8fab072d26a149253'
+step 3: topic did not move
+  predicted: 'c1a61109bfcd6bd9284294efa48a051419516086'
+  actual:    'c1a61109bfcd6bd9284294efa48a051419516086'
+step 3: notes.txt in the new commit is the predicted blob
+  predicted: '17f2fc0a7500e6b218190262d5a329086ba965ff'
+  actual:    '17f2fc0a7500e6b218190262d5a329086ba965ff'
+step 3: that blob really contains CRLF line endings
+  predicted: b'alpha\r\nbeta\r\n'
+  actual:    b'alpha\r\nbeta\r\n'
+step 3: the INDEX now holds the predicted blob too
+  predicted: '17f2fc0a7500e6b218190262d5a329086ba965ff'
+  actual:    '17f2fc0a7500e6b218190262d5a329086ba965ff'
+step 3: todo.txt kept its old blob (that object was not rewritten)
+  predicted: '5626abf0f72e58d7a153368ba57db4c673c0e171'
+  actual:    '5626abf0f72e58d7a153368ba57db4c673c0e171'
+step 3: the commit tree differs from C's tree
+  predicted: True
+  actual:    True
+step 3: untracked scratch.txt was NOT committed (-a only takes tracked files)
+  predicted: '?? scratch.txt'
+  actual:    '?? scratch.txt'
+step 3: both lines of notes.txt changed
+  predicted: '2\t2\tnotes.txt'
+  actual:    '2\t2\tnotes.txt'
+step 3: `git diff main whitespace` is NOT empty
+  predicted: True
+  actual:    True
+step 3: `git diff -b main whitespace` IS empty
+  predicted: ''
+  actual:    ''
+step 3: commit message
+  predicted: 'Convert notes.txt to DOS'
+  actual:    'Convert notes.txt to DOS'
+temporary directory was removed
+  predicted: False
+  actual:    False
+core.autocrlf is false in this temp repo
+  predicted: 'false'
+  actual:    'false'
+start: on branch main
+  predicted: 'main'
+  actual:    'main'
+start: working tree clean
+  predicted: ''
+  actual:    ''
+step 1: refs/heads/whitespace was created at C
+  predicted: '2b08ac708f02d757b12fcce8fab072d26a149253'
+  actual:    '2b08ac708f02d757b12fcce8fab072d26a149253'
+step 1: HEAD now points at refs/heads/whitespace
+  predicted: 'refs/heads/whitespace'
+  actual:    'refs/heads/whitespace'
+step 1: main did not move
+  predicted: '2b08ac708f02d757b12fcce8fab072d26a149253'
+  actual:    '2b08ac708f02d757b12fcce8fab072d26a149253'
+step 1: topic did not move
+  predicted: 'c1a61109bfcd6bd9284294efa48a051419516086'
+  actual:    'c1a61109bfcd6bd9284294efa48a051419516086'
+step 1: index is unchanged
+  predicted: '100644 fbbee861521bd5355538b096fa3998541cd33909 0\tnotes.txt\n100644 5626abf0f72e58d7a153368ba57db4c673c0e171 0\ttodo.txt'
+  actual:    '100644 fbbee861521bd5355538b096fa3998541cd33909 0\tnotes.txt\n100644 5626abf0f72e58d7a153368ba57db4c673c0e171 0\ttodo.txt'
+step 1: working tree is still clean
+  predicted: ''
+  actual:    ''
+step 2: status shows notes.txt modified (unstaged) and scratch.txt untracked
+  predicted: ' M notes.txt\n?? scratch.txt'
+  actual:    ' M notes.txt\n?? scratch.txt'
+step 2: the working-tree file hashes to the predicted blob
+  predicted: '17f2fc0a7500e6b218190262d5a329086ba965ff'
+  actual:    '17f2fc0a7500e6b218190262d5a329086ba965ff'
+step 2: the INDEX still holds the old blob
+  predicted: 'fbbee861521bd5355538b096fa3998541cd33909'
+  actual:    'fbbee861521bd5355538b096fa3998541cd33909'
+step 2: refs did not move (whitespace still at C)
+  predicted: '2b08ac708f02d757b12fcce8fab072d26a149253'
+  actual:    '2b08ac708f02d757b12fcce8fab072d26a149253'
+step 2: plain `git diff` lists notes.txt
+  predicted: 'notes.txt'
+  actual:    'notes.txt'
+step 2: `git diff` is NOT empty
+  predicted: True
+  actual:    True
+step 2: `git diff -b` IS empty (only line endings differ)
+  predicted: ''
+  actual:    ''
+step 3: whitespace moved to a NEW commit
+  predicted: True
+  actual:    True
+step 3: the new commit's parent is C
+  predicted: '2b08ac708f02d757b12fcce8fab072d26a149253'
+  actual:    '2b08ac708f02d757b12fcce8fab072d26a149253'
+step 3: HEAD still follows whitespace
+  predicted: 'refs/heads/whitespace'
+  actual:    'refs/heads/whitespace'
+step 3: main did not move
+  predicted: '2b08ac708f02d757b12fcce8fab072d26a149253'
+  actual:    '2b08ac708f02d757b12fcce8fab072d26a149253'
+step 3: topic did not move
+  predicted: 'c1a61109bfcd6bd9284294efa48a051419516086'
+  actual:    'c1a61109bfcd6bd9284294efa48a051419516086'
+step 3: notes.txt in the new commit is the predicted blob
+  predicted: '17f2fc0a7500e6b218190262d5a329086ba965ff'
+  actual:    '17f2fc0a7500e6b218190262d5a329086ba965ff'
+step 3: that blob really contains CRLF line endings
+  predicted: b'alpha\r\nbeta\r\n'
+  actual:    b'alpha\r\nbeta\r\n'
+step 3: the INDEX now holds the predicted blob too
+  predicted: '17f2fc0a7500e6b218190262d5a329086ba965ff'
+  actual:    '17f2fc0a7500e6b218190262d5a329086ba965ff'
+step 3: todo.txt kept its old blob (that object was not rewritten)
+  predicted: '5626abf0f72e58d7a153368ba57db4c673c0e171'
+  actual:    '5626abf0f72e58d7a153368ba57db4c673c0e171'
+step 3: the commit tree differs from C's tree
+  predicted: True
+  actual:    True
+step 3: untracked scratch.txt was NOT committed (-a only takes tracked files)
+  predicted: '?? scratch.txt'
+  actual:    '?? scratch.txt'
+step 3: both lines of notes.txt changed
+  predicted: '2\t2\tnotes.txt'
+  actual:    '2\t2\tnotes.txt'
+step 3: `git diff main whitespace` is NOT empty
+  predicted: True
+  actual:    True
+step 3: `git diff -b main whitespace` IS empty
+  predicted: ''
+  actual:    ''
+step 3: commit message
+  predicted: 'Convert notes.txt to DOS'
+  actual:    'Convert notes.txt to DOS'
+temporary directory was removed
+  predicted: False
+  actual:    False
+a blob id depends only on content: identical in both runs
+  predicted: '17f2fc0a7500e6b218190262d5a329086ba965ff'
+  actual:    '17f2fc0a7500e6b218190262d5a329086ba965ff'
