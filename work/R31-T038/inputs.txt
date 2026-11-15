@@ -1,0 +1,23 @@
+Scenario: Libgit2 HEAD commit lookup
+
+Commit A:
+- Create notes.txt
+- Content: alpha
+
+Commit B:
+- Append beta to notes.txt
+
+Commit C:
+- Create todo.txt
+- Content: one
+
+Branch:
+- Create topic at commit B
+- Keep HEAD on main at commit C
+
+Assertions:
+- HEAD^{commit} resolves to commit C
+- HEAD commit message matches commit C
+- HEAD author is Course Student <student@example.invalid>
+- topic points to commit B
+- Commit C contains todo.txt and notes.txt

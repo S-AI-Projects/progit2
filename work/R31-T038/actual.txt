@@ -1,0 +1,15 @@
+PASS: Guide contains git_revparse_single
+PASS: Guide resolves HEAD to a commit
+PASS: Guide reads the resolved commit message
+PASS: Failed Git commands propagate as errors
+PASS: HEAD^{commit} resolves to commit C
+PASS: HEAD commit message matches commit C
+PASS: HEAD author matches the configured author
+PASS: topic branch points to commit B
+PASS: The three commits have distinct object IDs
+PASS: Commit C contains notes.txt and todo.txt
+PASS: notes.txt contains alpha and beta
+PASS: todo.txt contains one
+PASS: Temporary repository is removed after the check
+
+ALL CHECKS PASSED
