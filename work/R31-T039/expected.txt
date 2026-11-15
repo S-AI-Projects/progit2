@@ -1,0 +1,26 @@
+PASS: main is the current branch
+PASS: main contains exactly three commits
+PASS: commit A contains notes.txt with alpha
+PASS: commit B contains alpha and beta
+PASS: commit C contains todo.txt with one
+PASS: topic points to commit B
+PASS: main HEAD points to commit C
+PASS: commit author is Course Student
+PASS: author name is configured locally
+PASS: author email is configured locally
+PASS: temporary repository working tree is clean
+PASS: guide includes: Before You Start
+PASS: guide includes: git rev-parse --show-toplevel
+PASS: guide includes: git branch --show-current
+PASS: guide includes: git status --short --branch
+PASS: guide includes: git config --local user.name
+PASS: guide includes: git config --local user.email
+PASS: guide includes: git init -b main example-repo
+PASS: guide includes: $ git rev-parse --show-toplevel
+PASS: guide includes: $ git branch --show-current
+PASS: guide includes: $ git status --short --branch
+PASS: guide includes: student@example.invalid
+PASS: guide includes: git branch topic
+PASS: guide includes: A: add notes
+PASS: guide includes: B: append notes
+PASS: guide includes: C: add todo
