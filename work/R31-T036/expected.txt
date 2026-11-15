@@ -1,0 +1,6 @@
+Two equivalent repositories begin at commit C.
+topic points to commit B in both repositories.
+Both commands create the same blob for identical file content.
+hash-object -w does not update the index.
+git add updates the index and stages the file.
+Neither command creates a commit or changes the working-tree content.
