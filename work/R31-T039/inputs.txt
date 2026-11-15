@@ -1,0 +1,8 @@
+Temporary Git repository
+Branch: main
+Author: Course Student <student@example.invalid>
+Commit A: notes.txt contains alpha\n
+Commit B: notes.txt contains alpha\nbeta\n
+Branch topic: points to commit B
+Commit C: todo.txt contains one\n
+No remote repository required
