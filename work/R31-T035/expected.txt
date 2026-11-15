@@ -1,0 +1,9 @@
+Commit A exists: e8c6edd6dfc07f89eba55e3fa0d6d6c00f214ffa
+Commit B exists: b4284da761eddf7e5dbdc12cc55e652b362f1408
+Commit C exists: f560c4a9101dc9cb3594792a8bac9366e4fe0d03
+topic points to commit B
+main points to commit C
+notes.txt contains alpha and beta
+todo.txt contains one
+release notes.txt appears in path history
+remote contains main and topic
