@@ -1,0 +1,8 @@
+PASS: Commits A, B and C created correctly.
+PASS: topic branch points to commit B.
+PASS: Commit without staging exits non-zero.
+PASS: Failed commit leaves HEAD and index unchanged.
+PASS: Staging allows the corrected commit.
+PASS: Final working tree is clean.
+PASS: All commits use the required author.
+ALL CHECKS PASSED

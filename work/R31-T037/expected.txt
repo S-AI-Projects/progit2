@@ -1,0 +1,10 @@
+Expected results:
+- Commits A, B and C are created successfully.
+- topic points to commit B; main points to commit C before the correction.
+- The unstaged commit attempt exits with a non-zero status.
+- HEAD remains at C and the index remains unchanged after the failed attempt.
+- After staging, the correction commit succeeds.
+- topic still points to B.
+- The final working tree is clean.
+- All commits use Course Student <student@example.invalid>.
+- Checker prints ALL CHECKS PASSED.

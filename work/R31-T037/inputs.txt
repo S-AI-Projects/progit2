@@ -1,0 +1,12 @@
+Test setup:
+1. Initialize a Git repository with branch main.
+2. Set author and committer to Course Student <student@example.invalid>.
+3. Create notes.txt containing alpha and commit A.
+4. Append beta to notes.txt and commit B.
+5. Create topic branch at B.
+6. Create todo.txt containing one and commit C on main.
+7. Append gamma to notes.txt without staging.
+8. Attempt to commit without staging.
+9. Verify the failed commit did not change HEAD or the index.
+10. Stage notes.txt and commit the correction.
+11. Verify topic still points to B and the working tree is clean.
