@@ -1,0 +1,183 @@
+Tools: git version 2.55.0; Python 3.14.6
+
+PREREQUISITES of `git clone hg::<path> <dest>` and what covers each
+  1. Mercurial installed (hg)              -> probed and REPORTED below (not required to pass)
+  2. git-remote-hg on PATH and executable  -> asserted missing (clone fails) and present (git runs it)
+  3. destination path must not exist       -> asserted before and after the failed clones
+  4. repo state: branch main, nothing staged, clean tree, topic at B
+                                           -> asserted, plus a staged file made visible then removed
+  5. config: identity and commit.gpgsign   -> set with `git config --local` only; global config snapshot
+                                              is asserted unchanged
+
+ENVIRONMENT PROBE (reported, not asserted):
+  hg (Mercurial): NOT FOUND - missing setup; the real hg:: clone cannot run on this computer
+  git-remote-hg: NOT FOUND - missing setup; the real hg:: clone cannot run on this computer
+
+identity is stored in the repo's LOCAL config
+  expected: 'student@example.invalid'
+  actual:   'student@example.invalid'
+the local config file lives inside the temp repo
+  expected: 1
+  actual:   1
+all 3 commits have the required author
+  expected: {'Course Student <student@example.invalid>'}
+  actual:   {'Course Student <student@example.invalid>'}
+three commits exist
+  expected: '3'
+  actual:   '3'
+current branch is main
+  expected: 'main'
+  actual:   'main'
+main is at C
+  expected: 'a572a58f34a7be73bb0e538999955d57ef5d7825'
+  actual:   'a572a58f34a7be73bb0e538999955d57ef5d7825'
+topic is at B
+  expected: 'ee5870a472434e4f51319b0464876ff51842bdcf'
+  actual:   'ee5870a472434e4f51319b0464876ff51842bdcf'
+nothing is staged
+  expected: ''
+  actual:   ''
+working tree is clean
+  expected: ''
+  actual:   ''
+a staged file shows up in `diff --cached`
+  expected: 'scratch.txt'
+  actual:   'scratch.txt'
+and in `status --short`
+  expected: 'A  scratch.txt'
+  actual:   'A  scratch.txt'
+after unstaging, the tree is clean again
+  expected: ''
+  actual:   ''
+`git log --oneline --graph --decorate` prints 3 lines
+  expected: 3
+  actual:   3
+line 1: C is HEAD on main
+  expected: '* a572a58 (HEAD -> main) C'
+  actual:   '* a572a58 (HEAD -> main) C'
+line 2: B carries the topic branch
+  expected: '* ee5870a (topic) B'
+  actual:   '* ee5870a (topic) B'
+line 3: A has no decoration
+  expected: '* 5f5f6d3 A'
+  actual:   '* 5f5f6d3 A'
+PREREQUISITE: destination does not exist yet
+  expected: False
+  actual:   False
+control: git itself runs in that restricted environment
+  expected: 0
+  actual:   0
+MISSING SETUP: `git clone hg::...` exits non-zero without git-remote-hg
+  expected: True
+  actual:   True
+MISSING SETUP: no destination directory is left behind
+  expected: False
+  actual:   False
+the stand-in helper is executable
+  expected: True
+  actual:   True
+PRESENT HELPER: git found git-remote-hg and ran it
+  expected: True
+  actual:   True
+PRESENT HELPER: it received the address that follows `hg::`
+  expected: '/var/folders/ty/l1twv5r90g54g2zp10112txr0000gn/T/tmp74y1qxd0/hello'
+  actual:   '/var/folders/ty/l1twv5r90g54g2zp10112txr0000gn/T/tmp74y1qxd0/hello'
+the stand-in aborts on purpose, so the clone still exits non-zero
+  expected: True
+  actual:   True
+and still no destination directory is left behind
+  expected: False
+  actual:   False
+the source repo was not changed by any of this
+  expected: 'a572a58f34a7be73bb0e538999955d57ef5d7825'
+  actual:   'a572a58f34a7be73bb0e538999955d57ef5d7825'
+temporary directory was removed
+  expected: False
+  actual:   False
+the user's GLOBAL git config is untouched
+  expected: (0, 'user.name=samikshakucheriya\nuser.emai=samikshakucheriya@gmail.com\nuser.email=samikshakucheriya@gmail.com\n')
+  actual:   (0, 'user.name=samikshakucheriya\nuser.emai=samikshakucheriya@gmail.com\nuser.email=samikshakucheriya@gmail.com\n')
+identity is stored in the repo's LOCAL config
+  expected: 'student@example.invalid'
+  actual:   'student@example.invalid'
+the local config file lives inside the temp repo
+  expected: 1
+  actual:   1
+all 3 commits have the required author
+  expected: {'Course Student <student@example.invalid>'}
+  actual:   {'Course Student <student@example.invalid>'}
+three commits exist
+  expected: '3'
+  actual:   '3'
+current branch is main
+  expected: 'main'
+  actual:   'main'
+main is at C
+  expected: 'b76d75cce6c5b80f1721f35e6c3e1b46c5f130b4'
+  actual:   'b76d75cce6c5b80f1721f35e6c3e1b46c5f130b4'
+topic is at B
+  expected: '56b9576ceb7a1a5c38f18af1036c40e16f01d5ff'
+  actual:   '56b9576ceb7a1a5c38f18af1036c40e16f01d5ff'
+nothing is staged
+  expected: ''
+  actual:   ''
+working tree is clean
+  expected: ''
+  actual:   ''
+a staged file shows up in `diff --cached`
+  expected: 'scratch.txt'
+  actual:   'scratch.txt'
+and in `status --short`
+  expected: 'A  scratch.txt'
+  actual:   'A  scratch.txt'
+after unstaging, the tree is clean again
+  expected: ''
+  actual:   ''
+`git log --oneline --graph --decorate` prints 3 lines
+  expected: 3
+  actual:   3
+line 1: C is HEAD on main
+  expected: '* b76d75c (HEAD -> main) C'
+  actual:   '* b76d75c (HEAD -> main) C'
+line 2: B carries the topic branch
+  expected: '* 56b9576 (topic) B'
+  actual:   '* 56b9576 (topic) B'
+line 3: A has no decoration
+  expected: '* ef7b784 A'
+  actual:   '* ef7b784 A'
+PREREQUISITE: destination does not exist yet
+  expected: False
+  actual:   False
+control: git itself runs in that restricted environment
+  expected: 0
+  actual:   0
+MISSING SETUP: `git clone hg::...` exits non-zero without git-remote-hg
+  expected: True
+  actual:   True
+MISSING SETUP: no destination directory is left behind
+  expected: False
+  actual:   False
+the stand-in helper is executable
+  expected: True
+  actual:   True
+PRESENT HELPER: git found git-remote-hg and ran it
+  expected: True
+  actual:   True
+PRESENT HELPER: it received the address that follows `hg::`
+  expected: '/var/folders/ty/l1twv5r90g54g2zp10112txr0000gn/T/tmp2qzoqrki/hello'
+  actual:   '/var/folders/ty/l1twv5r90g54g2zp10112txr0000gn/T/tmp2qzoqrki/hello'
+the stand-in aborts on purpose, so the clone still exits non-zero
+  expected: True
+  actual:   True
+and still no destination directory is left behind
+  expected: False
+  actual:   False
+the source repo was not changed by any of this
+  expected: 'b76d75cce6c5b80f1721f35e6c3e1b46c5f130b4'
+  actual:   'b76d75cce6c5b80f1721f35e6c3e1b46c5f130b4'
+temporary directory was removed
+  expected: False
+  actual:   False
+the user's GLOBAL git config is untouched
+  expected: (0, 'user.name=samikshakucheriya\nuser.emai=samikshakucheriya@gmail.com\nuser.email=samikshakucheriya@gmail.com\n')
+  actual:   (0, 'user.name=samikshakucheriya\nuser.emai=samikshakucheriya@gmail.com\nuser.email=samikshakucheriya@gmail.com\n')
