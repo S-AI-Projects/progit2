@@ -1,0 +1,14 @@
+Test execution results:
+
+- Commit A created notes.txt containing alpha.
+- Commit B appended beta to notes.txt.
+- topic branch was created at commit B.
+- Commit C added todo.txt containing one.
+- An unstaged change (gamma) was made to notes.txt.
+- Attempting to commit without staging failed as expected.
+- HEAD and the index remained unchanged after the failed commit.
+- Staging notes.txt and committing succeeded.
+- The final working tree was clean.
+- All commits used Course Student <student@example.invalid>.
+
+Checker result: ALL CHECKS PASSED

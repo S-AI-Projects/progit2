@@ -1,0 +1,5 @@
+Git version:
+git version 2.54.0 (Apple Git-157)
+
+Python version:
+Python 3.15.2
