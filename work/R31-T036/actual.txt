@@ -1,0 +1,9 @@
+Both test repositories start at commit C on main.
+In both repositories, topic points to commit B.
+Both commands store the same new blob object.
+hash-object leaves the index at the original blob.
+git add updates the index to the new blob.
+hash-object leaves notes.txt unstaged.
+git add stages notes.txt.
+Working-tree and staged diffs match the expected states.
+Neither workflow creates a commit or changes file content.
