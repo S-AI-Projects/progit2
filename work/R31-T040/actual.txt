@@ -1,0 +1,28 @@
+PASS: Commit C retains alpha and beta in notes.txt
+PASS: Commit C contains todo.txt with one
+PASS: topic points to commit B
+PASS: main points to commit C
+PASS: A, B, and C are distinct commits
+PASS: clone checks out main
+PASS: clone HEAD points to commit C
+PASS: cloned remote-tracking topic points to commit B
+PASS: clone starts with a clean working tree
+PASS: checkout -b switches to slow-blink
+PASS: HEAD remains at commit C after branch creation
+PASS: main remains at commit C
+PASS: HEAD symbolically references slow-blink
+PASS: branch creation leaves the working tree clean
+PASS: committed notes.txt still contains alpha and beta
+PASS: index still contains alpha and beta
+PASS: working tree contains alpha and gamma
+PASS: staged diff is empty
+PASS: unstaged diff detects the working-tree change
+PASS: word diff identifies beta removal and gamma addition
+PASS: HEAD remains at commit C after editing notes.txt
+PASS: guide contains: Predicting and Verifying Git State
+PASS: guide contains: git checkout -b slow-blink
+PASS: guide contains: git diff --word-diff
+PASS: guide contains: Answer and explanation
+PASS: guide contains: &#123;+...+&#125;
+
+TOTAL: 26 checks passed

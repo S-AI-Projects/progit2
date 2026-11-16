@@ -1,0 +1,6 @@
+R31-T040 — Tool Versions
+
+git version 2.54.0 (Apple Git-157)
+Python 3.15.2
+Asciidoctor 2.0.22 [https://asciidoctor.org]
+Runtime Environment (ruby 4.0.6 (2026-07-14 revision 03b6d3f889) +PRISM [arm64-darwin25]) (lc:UTF-8 fs:UTF-8 in:UTF-8 ex:UTF-8)

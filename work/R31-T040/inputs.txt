@@ -1,0 +1,17 @@
+R31-T040 — Prediction and Verification Exercise
+
+Input setup:
+- Temporary Git repository with main branch.
+- Commit A: notes.txt contains alpha.
+- Commit B: notes.txt contains alpha and beta.
+- Branch topic points to commit B.
+- Commit C: todo.txt contains one.
+- A local bare repository acts as the remote.
+- A fresh clone is used for the exercise.
+- The clone creates slow-blink and edits notes.txt without staging.
+
+Environment:
+- Git CLI
+- Python 3
+- Asciidoctor
+- Local temporary repositories; no GitHub network access required.
