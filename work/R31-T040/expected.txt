@@ -1,0 +1,17 @@
+R31-T040 — Expected Results
+
+1. Commit A, B, and C have distinct commit IDs.
+2. topic points to commit B.
+3. main points to commit C.
+4. The clone starts on main at commit C with a clean working tree.
+5. Creating slow-blink switches HEAD to that branch without changing commit C.
+6. main continues to point to commit C.
+7. After editing notes.txt:
+   - Committed file contains alpha and beta.
+   - Index contains alpha and beta.
+   - Working tree contains alpha and gamma.
+8. The staged diff is empty.
+9. The unstaged diff detects the edit.
+10. Word diff identifies beta as removed and gamma as added.
+11. HEAD remains at commit C.
+12. The guide contains the exercise, commands, and explanation.
