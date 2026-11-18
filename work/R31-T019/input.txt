@@ -1,0 +1,17 @@
+Guide check: python3 work/R31-T019/check.py
+
+Fixture:
+- Initialize a temporary Git repository on main.
+- Configure Course Student <student@example.invalid> with --local only.
+- Commit A creates notes.txt with "alpha\n".
+- Commit B appends "beta\n".
+- Create topic at B.
+- Commit C adds todo.txt with "one\n".
+- Stage draft.txt containing "in progress\n".
+- Preserve a pre-existing global config and assert it is unchanged.
+
+Assertions:
+- main is the current branch and points to C; topic points to B.
+- History contains exactly the dynamically captured A, B, and C object IDs.
+- draft.txt is staged, its index content is correct, and status reports it.
+- User identity is stored in .git/config; global Git config bytes are unchanged.

@@ -1,0 +1,26 @@
+{
+  "result": "PASS",
+  "repository_state": {
+    "branch": "main",
+    "head": "26f2613dfa9271eb97c85d69157ecb7f40f77815",
+    "history": [
+      "8f37a1fa00981d7d546c611b5c6febda333fbbb5",
+      "a99fdf25dfc3b210b4dcc7a7361909e8f8a65064",
+      "26f2613dfa9271eb97c85d69157ecb7f40f77815"
+    ],
+    "topic": "a99fdf25dfc3b210b4dcc7a7361909e8f8a65064",
+    "status": "## main\nA  draft.txt",
+    "staged_diff": "A\tdraft.txt",
+    "staged_contents": "in progress",
+    "local_identity": {
+      "name": "Course Student",
+      "email": "student@example.invalid"
+    },
+    "identity_config_origin": "file:.git/config\tstudent@example.invalid",
+    "global_config_unchanged": true,
+    "files": {
+      "notes.txt": "alpha\nbeta\n",
+      "todo.txt": "one\n"
+    }
+  }
+}

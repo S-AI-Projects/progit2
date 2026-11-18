@@ -1,0 +1,5 @@
+Python: 3.14.7
+Git: 2.54.0 (Apple Git-157)
+Asciidoctor: 2.0.22
+Ruby: 2.6.10p210
+PowerShell: not needed for the cross-platform temporary-repository check.

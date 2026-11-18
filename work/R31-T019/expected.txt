@@ -1,0 +1,11 @@
+Expected: check.py exits 0 and prints a JSON result of PASS.
+Expected branch: main.
+Expected main history: A, B, C in order, using dynamically captured object IDs.
+Expected topic: B.
+Expected files: notes.txt contains "alpha\nbeta\n"; todo.txt contains "one\n".
+Expected index: draft.txt is added with contents "in progress\n".
+Expected status:
+## main
+A  draft.txt
+Expected identity scope: Course Student <student@example.invalid> has origin .git/config.
+Expected global configuration: unchanged.
