@@ -1,0 +1,28 @@
+commit A: 8f37a1fa00981d7d546c611b5c6febda333fbbb5
+commit B: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+commit C: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+local main before topic push: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+remote main before topic push: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+remote topic before topic push: ''
+remote HEAD before topic push: refs/heads/main
+push main output:
+branch 'main' set up to track 'origin/main'.
+push topic output:
+branch 'topic' set up to track 'origin/topic'.
+current branch: topic
+HEAD target: refs/heads/topic
+local main after topic push: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+local topic after topic push: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+remote main after topic push: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+remote topic after topic push: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+origin/main: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+origin/topic: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+remote HEAD after topic push: refs/heads/main
+local branch refs:
+refs/heads/main 26f2613dfa9271eb97c85d69157ecb7f40f77815
+refs/heads/topic a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+remote branch refs:
+refs/heads/main 26f2613dfa9271eb97c85d69157ecb7f40f77815
+refs/heads/topic a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+status:
+## topic...origin/topic

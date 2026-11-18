@@ -1,0 +1,13 @@
+Before pushing topic:
+  local refs/heads/main is C; remote refs/heads/main is C.
+  remote HEAD is symbolic to refs/heads/main.
+  remote refs/heads/topic does not exist yet.
+
+After `git push -u origin topic` while on local topic:
+  local refs/heads/topic remains B; local refs/heads/main remains C.
+  remote refs/heads/topic is created at B; remote refs/heads/main remains C.
+  local origin/topic tracks B and origin/main tracks C.
+  remote HEAD remains symbolic to refs/heads/main.
+  Local HEAD is symbolic to refs/heads/topic and the worktree is clean.
+
+Commit IDs are captured dynamically. Exact refs and command output are in actual.txt.

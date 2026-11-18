@@ -1,0 +1,12 @@
+Temporary local setup:
+  main: commits A, B, C
+  topic: created at B
+  author/committer: Course Student <student@example.invalid>
+  remote: second local bare repository, addressed with a file:// URL
+
+Operation:
+  push main to initialize the bare remote default branch
+  switch to local topic; push -u origin topic
+
+The check asserts the local and remote branch refs, symbolic HEAD targets,
+default branch, upstream refs, ancestry, and final clean status.
