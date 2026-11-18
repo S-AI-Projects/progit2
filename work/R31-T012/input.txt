@@ -1,0 +1,12 @@
+Temporary repository setup:
+  branch: main
+  author/committer: Course Student <student@example.invalid>
+  A: notes.txt contains "alpha\n"
+  B: append "beta\n"; create topic at B
+  C: todo.txt contains "one\n"
+
+Operation under test:
+  git update-ref refs/heads/main <B> <C>
+
+The check captures commit IDs using rev-parse and verifies refs, ancestry,
+HEAD, index tree, staged/worktree diffs, file contents, status, and reachable log.

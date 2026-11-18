@@ -1,0 +1,31 @@
+commit A: 8f37a1fa00981d7d546c611b5c6febda333fbbb5
+commit B: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+commit C: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+HEAD before: refs/heads/main
+main before: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+topic before: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+index tree before: 70d571a7a75867c09d38254b1252d5e2402adaa6
+log main before:
+26f2613dfa9271eb97c85d69157ecb7f40f77815 C: add todo
+a99fdf25dfc3b210b4dcc7a7361909e8f8a65064 B: append beta
+8f37a1fa00981d7d546c611b5c6febda333fbbb5 A: create notes
+operation: git update-ref refs/heads/main <B> <C>
+HEAD after: refs/heads/main
+main after: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+topic after: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+index tree after: 70d571a7a75867c09d38254b1252d5e2402adaa6
+C object type: commit
+stale expected-old update return code: 128
+status after:
+## main
+A  todo.txt
+cached name-status:
+A	todo.txt
+worktree name-status:
+
+log main after:
+a99fdf25dfc3b210b4dcc7a7361909e8f8a65064 B: append beta
+8f37a1fa00981d7d546c611b5c6febda333fbbb5 A: create notes
+files after:
+notes.txt='alpha\nbeta\n'
+todo.txt='one\n'

@@ -1,0 +1,13 @@
+Expected before update:
+  HEAD is symbolic to refs/heads/main; main is C; topic is B.
+  C has parent B and B has parent A.
+  The index and working tree both contain C's tree.
+
+Expected after git update-ref refs/heads/main B C:
+  HEAD remains symbolic to refs/heads/main; main is B; topic remains B.
+  C remains an existing commit object with parent B; main's log contains B and A.
+  The index and working tree still match C's tree, so todo.txt appears as a
+  staged addition relative to main and no unstaged changes appear.
+  An update with stale expected-old value C is rejected and leaves main at B.
+
+All commit and tree IDs are collected dynamically. See actual.txt for the exact results.
