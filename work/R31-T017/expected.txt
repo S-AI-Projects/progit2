@@ -1,0 +1,11 @@
+Expected failed case:
+  The missing source path is not a Git repository.
+  git clone exits non-zero with a local repository/path error.
+  Diagnostic wording is not compared byte-for-byte.
+
+Expected repaired case:
+  Cloning the existing local bare repository succeeds.
+  HEAD/main point to C; origin/topic points to B.
+  Index tree equals C; notes.txt and todo.txt are checked out; status is clean.
+
+Actual diagnostic, exit code, refs, tree, and contents are recorded in actual.txt.

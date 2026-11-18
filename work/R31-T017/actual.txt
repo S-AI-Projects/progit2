@@ -1,0 +1,17 @@
+commit A: 8f37a1fa00981d7d546c611b5c6febda333fbbb5
+commit B / topic: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+commit C / main: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+existing source path: /var/folders/qy/t9dt3lrs27lbxf1vj5rhsyjw0000gn/T/R31-T017-i8niaeem/project.git
+missing source path: /var/folders/qy/t9dt3lrs27lbxf1vj5rhsyjw0000gn/T/R31-T017-i8niaeem/missing.git
+failed clone exit status: 128
+failed clone diagnostic category:
+fatal: repository '/var/folders/qy/t9dt3lrs27lbxf1vj5rhsyjw0000gn/T/R31-T017-i8niaeem/missing.git' does not exist
+corrected command: git clone <existing local repository path> <destination>
+repaired HEAD: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+repaired main: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+repaired origin/topic: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+tree at HEAD: 70d571a7a75867c09d38254b1252d5e2402adaa6
+index tree: 70d571a7a75867c09d38254b1252d5e2402adaa6
+status:
+## main...origin/main
+files: {'notes.txt': 'alpha\nbeta\n', 'todo.txt': 'one\n'}

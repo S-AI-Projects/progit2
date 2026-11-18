@@ -1,0 +1,15 @@
+Temporary fixture:
+  main: A creates notes.txt with "alpha\n"; B appends "beta\n";
+        C adds todo.txt with "one\n"
+  topic: points to B
+  author/committer: Course Student <student@example.invalid>
+  source: a second local bare repository seeded via file://
+
+Failure:
+  git clone <nonexistent-local-path> <bad-clone>
+
+Correction:
+  git clone <existing-local-bare-repository> <good-clone>
+
+The check captures the failed return code and verifies a broad repository-path
+error category, then checks the successful clone's refs, tree, index and files.
