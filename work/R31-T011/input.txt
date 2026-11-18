@@ -1,0 +1,11 @@
+Walkthrough setup:
+  git init --initial-branch=main
+  author/committer: Course Student <student@example.invalid>
+  A: create notes.txt containing "alpha\n"
+  B: append "beta\n" to notes.txt; create branch topic at B
+  C: create todo.txt containing "one\n"
+  operation: git diff --word-diff topic^ topic
+  expected final state: main at C, topic at B, clean worktree and index
+
+Automated check:
+  python3 work/R31-T011/check.py

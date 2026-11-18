@@ -1,0 +1,43 @@
+Run 1
+commit A: 8f37a1fa00981d7d546c611b5c6febda333fbbb5
+commit B: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+commit C: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+main: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+topic: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+index tree: 70d571a7a75867c09d38254b1252d5e2402adaa6
+status:
+## main
+word diff:
+diff --git a/notes.txt b/notes.txt
+index 4a58007..fbbee86 100644
+--- a/notes.txt
++++ b/notes.txt
+@@ -1 +1,2 @@
+alpha
+{+beta+}
+log:
+* 26f2613 (HEAD -> main) C: add todo
+* a99fdf2 (topic) B: append beta
+* 8f37a1f A: create notes
+
+Run 2
+commit A: 8f37a1fa00981d7d546c611b5c6febda333fbbb5
+commit B: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+commit C: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+main: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+topic: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+index tree: 70d571a7a75867c09d38254b1252d5e2402adaa6
+status:
+## main
+word diff:
+diff --git a/notes.txt b/notes.txt
+index 4a58007..fbbee86 100644
+--- a/notes.txt
++++ b/notes.txt
+@@ -1 +1,2 @@
+alpha
+{+beta+}
+log:
+* 26f2613 (HEAD -> main) C: add todo
+* a99fdf2 (topic) B: append beta
+* 8f37a1f A: create notes
