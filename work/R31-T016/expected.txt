@@ -1,0 +1,16 @@
+Both clones use the same source refs: main at C, topic at B, remote HEAD at main.
+Both destinations retain A, B and C as commit objects.
+
+Normal clone:
+  HEAD -> refs/heads/main at C
+  refs/remotes/origin/main is C; refs/remotes/origin/topic is B
+  index tree equals C; notes.txt and todo.txt are checked out; status is clean
+  and tracks origin/main
+  no local refs/heads/topic is created by the default clone
+
+Bare clone:
+  is-bare-repository is true; HEAD -> refs/heads/main
+  refs/heads/main is C; refs/heads/topic is B; no origin/* refs exist
+  no index or checked-out files exist
+
+Exact dynamically captured values and outputs are in actual.txt.

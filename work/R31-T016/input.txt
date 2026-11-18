@@ -1,0 +1,12 @@
+Equivalent fixture for both clone commands:
+  main: A creates notes.txt with "alpha\n"; B appends "beta\n";
+        C adds todo.txt with "one\n"
+  topic: points to B
+  author/committer: Course Student <student@example.invalid>
+  remote: second local bare repository with HEAD -> refs/heads/main
+
+Compare:
+  git clone file://<remote> <working-directory>
+  git clone --bare file://<remote> <bare-directory>
+
+The check records each destination's refs, commit objects, index and worktree.

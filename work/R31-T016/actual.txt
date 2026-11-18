@@ -1,0 +1,28 @@
+commit A: 8f37a1fa00981d7d546c611b5c6febda333fbbb5
+commit B: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+commit C: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+tree C: 70d571a7a75867c09d38254b1252d5e2402adaa6
+remote HEAD: refs/heads/main
+remote main: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+remote topic: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+normal clone:
+HEAD target: refs/heads/main
+main: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+origin/main: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+origin/topic: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+HEAD tree: 70d571a7a75867c09d38254b1252d5e2402adaa6
+index tree: 70d571a7a75867c09d38254b1252d5e2402adaa6
+status: ## main...origin/main
+files: {'notes.txt': 'alpha\nbeta\n', 'todo.txt': 'one\n'}
+local topic branch ref: ''
+bare clone:
+is bare: true
+HEAD target: refs/heads/main
+main: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+topic: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+branch refs:
+refs/heads/main 26f2613dfa9271eb97c85d69157ecb7f40f77815
+refs/heads/topic a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+remote-tracking refs: ''
+index exists: False
+worktree files exist: False
