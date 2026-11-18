@@ -1,0 +1,23 @@
+commit A: 8f37a1fa00981d7d546c611b5c6febda333fbbb5
+commit B: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+commit C / recovery commit: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+topic before/after: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064 / a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+recovery tree: 70d571a7a75867c09d38254b1252d5e2402adaa6
+mistake search:
+notes.txt:2:mistake
+status before restore:
+## main
+M  notes.txt
+index tree before restore: 2eb17ee6e4daf508e8ebb6db9691f13961e899e3
+recovery command: git restore --source=HEAD --staged --worktree -- notes.txt
+HEAD after: 26f2613dfa9271eb97c85d69157ecb7f40f77815
+tree at HEAD after: 70d571a7a75867c09d38254b1252d5e2402adaa6
+index tree after: 70d571a7a75867c09d38254b1252d5e2402adaa6
+status after restore:
+## main
+search after restore:
+notes.txt:2:beta
+final log:
+26f2613dfa9271eb97c85d69157ecb7f40f77815 C: add todo
+notes.txt='alpha\nbeta\n'
+todo.txt='one\n'

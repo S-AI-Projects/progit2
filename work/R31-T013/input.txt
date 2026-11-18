@@ -1,0 +1,12 @@
+Temporary repository:
+  branch main; author/committer Course Student <student@example.invalid>
+  A: notes.txt = "alpha\n"
+  B: append "beta\n"; create topic at B
+  C: todo.txt = "one\n"
+
+Recovery point: commit C and its tree, both captured with git rev-parse.
+Mistake: overwrite notes.txt with "alpha\nmistake\n" and stage it.
+Recovery: git restore --source=HEAD --staged --worktree -- notes.txt
+
+The check verifies git grep's working-tree result, pre-recovery index/status,
+the recovered commit/tree/index/file contents, refs, and clean worktree.

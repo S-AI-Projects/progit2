@@ -1,0 +1,14 @@
+Before recovery:
+  main/HEAD remain at C and topic remains at B.
+  git grep -n mistake finds notes.txt:2:mistake in the working tree.
+  notes.txt is staged as modified; the index tree differs from C.
+
+After git restore --source=HEAD --staged --worktree -- notes.txt:
+  HEAD, main, topic, and commit ancestry are unchanged.
+  The index tree equals C's saved tree; the worktree is clean.
+  notes.txt is "alpha\nbeta\n"; todo.txt is "one\n".
+  git grep -n beta finds notes.txt:2:beta.
+
+The restore replaces staged and working-tree content for the named path. It does
+not recover the discarded mistake, untracked files, or work never committed.
+Exact object IDs and command results are recorded in actual.txt.
