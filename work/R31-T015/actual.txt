@@ -1,0 +1,18 @@
+commit A: 8f37a1fa00981d7d546c611b5c6febda333fbbb5
+commit B / oldrev / topic: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064
+commit C / newrev / main: 9f0a80e1e3c6c4a4cbc99cf2d7e783c015d2bce9
+revision range: a99fdf25dfc3b210b4dcc7a7361909e8f8a65064..9f0a80e1e3c6c4a4cbc99cf2d7e783c015d2bce9
+git rev-list range:
+9f0a80e1e3c6c4a4cbc99cf2d7e783c015d2bce9
+git rev-list range -- 'release notes.txt' 'sample data':
+9f0a80e1e3c6c4a4cbc99cf2d7e783c015d2bce9
+git log path names:
+release notes.txt
+sample data/example.txt
+file-only rev-list:
+9f0a80e1e3c6c4a4cbc99cf2d7e783c015d2bce9
+directory-only rev-list:
+9f0a80e1e3c6c4a4cbc99cf2d7e783c015d2bce9
+notes.txt='alpha\nbeta\n'
+release notes.txt='Release one\n'
+sample data/example.txt='example\n'

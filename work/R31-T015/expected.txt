@@ -1,0 +1,12 @@
+Expected history:
+  main points to C; topic points to B; C's parent is B; B's parent is A.
+  The range topic..main contains C.
+
+Expected path-filtered results:
+  git rev-list topic..main -- "release notes.txt" "sample data" prints C once.
+  The matching paths are "release notes.txt" and "sample data/example.txt".
+  Quoting keeps each spaced path a single shell argument; `--` separates paths
+  from revisions and disambiguates path names that could also be revisions.
+
+The check asserts the final file contents and clean index/worktree. See actual.txt
+for the captured IDs and outputs.

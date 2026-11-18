@@ -1,0 +1,11 @@
+Temporary repository:
+  main: A creates notes.txt, B appends beta, C adds todo.txt
+  topic: points to B
+  C also adds "release notes.txt" and "sample data/example.txt"
+  author/committer: Course Student <student@example.invalid>
+
+Operation:
+  git rev-list "$oldrev..$newrev" -- "release notes.txt" "sample data"
+
+The check uses oldrev=topic and newrev=main, captures hashes dynamically, and
+verifies both the matching commit set and the path names emitted by git log.
