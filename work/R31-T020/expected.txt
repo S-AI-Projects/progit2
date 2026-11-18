@@ -1,0 +1,8 @@
+The check exits 0 and prints result PASS.
+Before and after snapshots are identical.
+main and HEAD remain at dynamically captured commit C.
+topic remains at dynamically captured commit B.
+The history still contains exactly A, B, and C.
+The HEAD tree equals the index tree; status remains "## main".
+notes.txt contains "alpha\nbeta\n"; todo.txt contains "one\n".
+No merge commit is created because topic is already an ancestor of main.

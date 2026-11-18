@@ -1,0 +1,52 @@
+{
+  "after": {
+    "branch_refs": [
+      "26f2613dfa9271eb97c85d69157ecb7f40f77815 refs/heads/main",
+      "a99fdf25dfc3b210b4dcc7a7361909e8f8a65064 refs/heads/topic"
+    ],
+    "head": "26f2613dfa9271eb97c85d69157ecb7f40f77815",
+    "head_ref": "refs/heads/main",
+    "head_tree": "70d571a7a75867c09d38254b1252d5e2402adaa6",
+    "history": [
+      "8f37a1f A: create notes",
+      "a99fdf2 B: append beta",
+      "26f2613 C: add todo"
+    ],
+    "index_tree": "70d571a7a75867c09d38254b1252d5e2402adaa6",
+    "main": "26f2613dfa9271eb97c85d69157ecb7f40f77815",
+    "notes": "alpha\nbeta\n",
+    "paths": [
+      "notes.txt",
+      "todo.txt"
+    ],
+    "status": "## main",
+    "todo": "one\n",
+    "topic": "a99fdf25dfc3b210b4dcc7a7361909e8f8a65064"
+  },
+  "before": {
+    "branch_refs": [
+      "26f2613dfa9271eb97c85d69157ecb7f40f77815 refs/heads/main",
+      "a99fdf25dfc3b210b4dcc7a7361909e8f8a65064 refs/heads/topic"
+    ],
+    "head": "26f2613dfa9271eb97c85d69157ecb7f40f77815",
+    "head_ref": "refs/heads/main",
+    "head_tree": "70d571a7a75867c09d38254b1252d5e2402adaa6",
+    "history": [
+      "8f37a1f A: create notes",
+      "a99fdf2 B: append beta",
+      "26f2613 C: add todo"
+    ],
+    "index_tree": "70d571a7a75867c09d38254b1252d5e2402adaa6",
+    "main": "26f2613dfa9271eb97c85d69157ecb7f40f77815",
+    "notes": "alpha\nbeta\n",
+    "paths": [
+      "notes.txt",
+      "todo.txt"
+    ],
+    "status": "## main",
+    "todo": "one\n",
+    "topic": "a99fdf25dfc3b210b4dcc7a7361909e8f8a65064"
+  },
+  "merge": "git merge topic",
+  "result": "PASS"
+}

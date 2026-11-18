@@ -1,0 +1,16 @@
+Command under test: git merge topic
+
+Fixture:
+- Temporary repository, branch main.
+- Author and committer: Course Student <student@example.invalid>.
+- A creates notes.txt with "alpha\n".
+- B appends "beta\n".
+- topic is created at B.
+- C adds todo.txt with "one\n".
+- Execute git merge topic with main at C.
+
+Expected:
+- B is already an ancestor of C.
+- Merge succeeds without creating a commit or moving any ref.
+- HEAD and main stay at C; topic stays at B.
+- The tree, index, working-tree contents, and clean status are unchanged.
