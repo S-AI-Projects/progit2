@@ -1,0 +1,11 @@
+Amend scenario:
+  main points to a replacement for C, with B as its parent.
+  topic stays at B; main history still has exactly three commits.
+  forgotten_file is in the amended commit; the index matches HEAD and status is clean.
+  The original C is no longer reachable from main.
+
+Omitted-amend control:
+  main remains at C; forgotten_file is absent from HEAD and remains staged.
+  The amendment acceptance predicate rejects this state.
+
+Actual dynamic IDs and complete state snapshots are in actual.txt.

@@ -1,0 +1,68 @@
+{
+  "amended_scenario": {
+    "original": {
+      "A": "8f37a1fa00981d7d546c611b5c6febda333fbbb5",
+      "B": "a99fdf25dfc3b210b4dcc7a7361909e8f8a65064",
+      "C": "26f2613dfa9271eb97c85d69157ecb7f40f77815"
+    },
+    "state": {
+      "amend_requested": true,
+      "files": {
+        "forgotten_file": "remember this\n",
+        "notes.txt": "alpha\nbeta\n",
+        "todo.txt": "one\n"
+      },
+      "head": "25e25db0a7c56bacb4750034cde15941964bcfb8",
+      "head_tree": "4d152d1f7776e2a76c87995d8e7d4d33c30d6ae7",
+      "history": [
+        "8f37a1fa00981d7d546c611b5c6febda333fbbb5",
+        "a99fdf25dfc3b210b4dcc7a7361909e8f8a65064",
+        "25e25db0a7c56bacb4750034cde15941964bcfb8"
+      ],
+      "index_tree": "4d152d1f7776e2a76c87995d8e7d4d33c30d6ae7",
+      "main": "25e25db0a7c56bacb4750034cde15941964bcfb8",
+      "old_tip_reachable": false,
+      "parent": "a99fdf25dfc3b210b4dcc7a7361909e8f8a65064",
+      "paths": [
+        "forgotten_file",
+        "notes.txt",
+        "todo.txt"
+      ],
+      "status": "## main\n",
+      "topic": "a99fdf25dfc3b210b4dcc7a7361909e8f8a65064"
+    }
+  },
+  "omitted_amend_control": {
+    "original": {
+      "A": "8f37a1fa00981d7d546c611b5c6febda333fbbb5",
+      "B": "a99fdf25dfc3b210b4dcc7a7361909e8f8a65064",
+      "C": "26f2613dfa9271eb97c85d69157ecb7f40f77815"
+    },
+    "state": {
+      "amend_requested": false,
+      "files": {
+        "forgotten_file": "remember this\n",
+        "notes.txt": "alpha\nbeta\n",
+        "todo.txt": "one\n"
+      },
+      "head": "26f2613dfa9271eb97c85d69157ecb7f40f77815",
+      "head_tree": "70d571a7a75867c09d38254b1252d5e2402adaa6",
+      "history": [
+        "8f37a1fa00981d7d546c611b5c6febda333fbbb5",
+        "a99fdf25dfc3b210b4dcc7a7361909e8f8a65064",
+        "26f2613dfa9271eb97c85d69157ecb7f40f77815"
+      ],
+      "index_tree": "4d152d1f7776e2a76c87995d8e7d4d33c30d6ae7",
+      "main": "26f2613dfa9271eb97c85d69157ecb7f40f77815",
+      "old_tip_reachable": true,
+      "parent": "a99fdf25dfc3b210b4dcc7a7361909e8f8a65064",
+      "paths": [
+        "notes.txt",
+        "todo.txt"
+      ],
+      "status": "## main\nA  forgotten_file\n",
+      "topic": "a99fdf25dfc3b210b4dcc7a7361909e8f8a65064"
+    }
+  },
+  "result": "PASS"
+}

@@ -1,0 +1,9 @@
+Guide sequence under test:
+  commit A: notes.txt = "alpha\n"
+  commit B: append "beta\n"; create topic at B
+  commit C: todo.txt = "one\n"
+  stage forgotten_file after C
+  run git commit --amend noninteractively
+
+The integration test also runs a negative control that stages forgotten_file
+but deliberately omits git commit --amend.
