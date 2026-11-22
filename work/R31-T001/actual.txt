@@ -1,0 +1,41 @@
+Run 1
+commit A: 72484e1e91e95f77532cd0d8df46e8a4533cdb18
+commit B: 698f5fc052c85747dbda8570eb977b8282f736d4
+commit C: 8b5bec6cf2dbeac21df819489c27fe6ebaf3622b
+main: 8b5bec6cf2dbeac21df819489c27fe6ebaf3622b
+topic: 698f5fc052c85747dbda8570eb977b8282f736d4
+index tree: 70d571a7a75867c09d38254b1252d5e2402adaa6
+status:
+## main
+diff (GIT_DIFF_OPTS="--unified=0"): 
+diff --git a/notes.txt b/notes.txt
+index 4a58007..fbbee86 100644
+--- a/notes.txt
++++ b/notes.txt
+@@ -1,0 +2 @@ alpha
++beta
+log:
+* 8b5bec6 (HEAD -> main) C: add todo
+* 698f5fc (topic) B: append beta
+* 72484e1 A: create notes
+
+Run 2
+commit A: 72484e1e91e95f77532cd0d8df46e8a4533cdb18
+commit B: 698f5fc052c85747dbda8570eb977b8282f736d4
+commit C: 8b5bec6cf2dbeac21df819489c27fe6ebaf3622b
+main: 8b5bec6cf2dbeac21df819489c27fe6ebaf3622b
+topic: 698f5fc052c85747dbda8570eb977b8282f736d4
+index tree: 70d571a7a75867c09d38254b1252d5e2402adaa6
+status:
+## main
+diff (GIT_DIFF_OPTS="--unified=0"): 
+diff --git a/notes.txt b/notes.txt
+index 4a58007..fbbee86 100644
+--- a/notes.txt
++++ b/notes.txt
+@@ -1,0 +2 @@ alpha
++beta
+log:
+* 8b5bec6 (HEAD -> main) C: add todo
+* 698f5fc (topic) B: append beta
+* 72484e1 A: create notes

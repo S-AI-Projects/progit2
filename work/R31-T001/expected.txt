@@ -1,0 +1,26 @@
+Each of two independent temporary repositories should have:
+
+Files:
+  notes.txt = "alpha\nbeta\n"
+  todo.txt  = "one\n"
+
+Refs and index:
+  main points to C; topic points to B; HEAD is on main
+  git status --short --branch prints "## main"
+  the HEAD tree equals the index tree; worktree and index diffs are empty
+
+Diff:
+  `GIT_DIFF_OPTS="--unified=0" git diff topic^ topic` produces a unified diff with 0 context lines:
+    diff --git a/notes.txt b/notes.txt
+    index <A-blob>..<B-blob> 100644
+    --- a/notes.txt
+    +++ b/notes.txt
+    @@ -1,0 +2 @@ alpha
+    +beta
+
+Log (commit IDs are captured dynamically):
+  * <C> (HEAD -> main) C: add todo
+  * <B> (topic) B: append beta
+  * <A> A: create notes
+
+The complete actual command outputs and captured IDs are written by check.py to actual.txt.
