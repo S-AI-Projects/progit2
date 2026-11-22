@@ -1,0 +1,5 @@
+PASS: git diff suppresses diff body when file is marked binary in .gitattributes
+PASS: git diff --text reveals actual changed content despite binary attribute
+PASS: git show output suppresses diff body for binary-attributed file
+PASS: .gitattributes binary attribute is recorded in the index
+PASS: both workflows start from identical committed tree state
