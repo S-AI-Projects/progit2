@@ -1,0 +1,26 @@
+Task: R31-T004 – Clarify branch and remote tracking semantics (posh-git / PowerShell guide)
+File: book/A-git-in-other-environments/sections/powershell.asc
+
+Repository fixture (all in temporary directories, no network):
+  Author : Course Student <student@example.invalid>
+  Branch : main (default)
+  Commits:
+    A – notes.txt  = "alpha\n"
+    B – notes.txt  = "alpha\nbeta\n"   <-- topic branch created here
+    C – todo.txt   = "one\n"           (only on main)
+
+Remote:
+  A second local bare repository initialised with --initial-branch=main
+  Added as "origin" via  file:// URL
+
+Operations under test:
+  1. git push -u origin main   (establishes remote default branch)
+  2. git checkout topic
+  3. git push -u origin topic  (push non-default branch with tracking)
+
+Assertions:
+  1. refs/heads/main stays at commit C (unchanged by topic push)
+  2. refs/remotes/origin/main stays at commit C (remote main untouched)
+  3. The bare repo HEAD still symrefs refs/heads/main (remote default unchanged)
+  4. refs/remotes/origin/topic is created and points to commit B
+  5. topic branch upstream is configured as origin/topic
