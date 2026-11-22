@@ -1,0 +1,39 @@
+Run 1
+commit A: 72484e1e91e95f77532cd0d8df46e8a4533cdb18
+commit B: 698f5fc052c85747dbda8570eb977b8282f736d4
+commit C / recovery commit: 8b5bec6cf2dbeac21df819489c27fe6ebaf3622b
+recovery tree: 70d571a7a75867c09d38254b1252d5e2402adaa6
+Mistake state:
+  status: ## main
+M  notes.txt
+  index tree: fe17853eae695cdaa3ed25aaa0716f4b128ecd5f
+Recovery command: git restore --source=HEAD --staged --worktree -- notes.txt
+Recovered state:
+  HEAD: 8b5bec6cf2dbeac21df819489c27fe6ebaf3622b
+  HEAD ref: refs/heads/main
+  main ref: 8b5bec6cf2dbeac21df819489c27fe6ebaf3622b
+  topic ref: 698f5fc052c85747dbda8570eb977b8282f736d4
+  tree at HEAD: 70d571a7a75867c09d38254b1252d5e2402adaa6
+  index tree: 70d571a7a75867c09d38254b1252d5e2402adaa6
+  status: ## main
+  files: {'notes.txt': 'alpha\nbeta\n', 'todo.txt': 'one\n'}
+
+Run 2
+commit A: 72484e1e91e95f77532cd0d8df46e8a4533cdb18
+commit B: 698f5fc052c85747dbda8570eb977b8282f736d4
+commit C / recovery commit: 8b5bec6cf2dbeac21df819489c27fe6ebaf3622b
+recovery tree: 70d571a7a75867c09d38254b1252d5e2402adaa6
+Mistake state:
+  status: ## main
+M  notes.txt
+  index tree: fe17853eae695cdaa3ed25aaa0716f4b128ecd5f
+Recovery command: git restore --source=HEAD --staged --worktree -- notes.txt
+Recovered state:
+  HEAD: 8b5bec6cf2dbeac21df819489c27fe6ebaf3622b
+  HEAD ref: refs/heads/main
+  main ref: 8b5bec6cf2dbeac21df819489c27fe6ebaf3622b
+  topic ref: 698f5fc052c85747dbda8570eb977b8282f736d4
+  tree at HEAD: 70d571a7a75867c09d38254b1252d5e2402adaa6
+  index tree: 70d571a7a75867c09d38254b1252d5e2402adaa6
+  status: ## main
+  files: {'notes.txt': 'alpha\nbeta\n', 'todo.txt': 'one\n'}
