@@ -1,0 +1,31 @@
+Task: R31-T008 – Make the go-git guide executable as an integration test
+File: book/B-embedding-git/sections/go-git.asc
+
+The go-git guide shows three core operations in Go:
+  1. Clone a repository (git.PlainClone)
+  2. Read HEAD (r.Head())
+  3. Walk commit history (commit.History())
+
+These map to Git CLI equivalents:
+  1. git clone file://...
+  2. git rev-parse HEAD
+  3. git log --format=%H
+
+Repository fixture (all in temporary directories, no network):
+  Author : Course Student <student@example.invalid>
+  Branch : main (default)
+  Commits:
+    A – notes.txt  = "alpha\n"
+    B – notes.txt  = "alpha\nbeta\n"   <-- topic branch created here
+    C – todo.txt   = "one\n"           (only on main)
+
+Remote:
+  A second local bare repository initialised with --initial-branch=main
+  Added as "origin" via file:// URL, then cloned to verify.
+
+Assertions:
+  1. Clone produces a valid repository with .git directory
+  2. HEAD in the clone matches the source main branch tip
+  3. Commit history length matches expected count (3 commits)
+  4. Oldest commit in history is commit A (initial commit)
+  5. Deliberate omission of the clone step causes failure as expected
