@@ -1,0 +1,14 @@
+=== Trial 1 ===
+PASS: clone produces a valid repository with .git directory
+PASS: HEAD in clone matches the source main branch tip
+PASS: commit history length matches expected count (3 commits)
+PASS: oldest commit in history is commit A (initial commit)
+PASS: deliberate omission of clone step causes failure as expected
+
+=== Trial 2 ===
+PASS: clone produces a valid repository with .git directory
+PASS: HEAD in clone matches the source main branch tip
+PASS: commit history length matches expected count (3 commits)
+PASS: oldest commit in history is commit A (initial commit)
+PASS: deliberate omission of clone step causes failure as expected
+
