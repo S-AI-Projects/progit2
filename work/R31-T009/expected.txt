@@ -1,0 +1,5 @@
+PASS: clean working tree and index on branch main before fetch
+PASS: local config contains PR refspec and global config is untouched
+PASS: git fetch creates refs/remotes/origin/pr/1 pointing to commit B
+PASS: git checkout pr/1 switches to pr/1 at commit B
+PASS: worktree on pr/1 contains notes.txt and lacks todo.txt

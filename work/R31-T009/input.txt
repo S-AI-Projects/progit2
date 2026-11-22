@@ -1,0 +1,28 @@
+Task: R31-T009 – State the missing setup explicitly: 3 maintaining
+File: book/06-github/sections/3-maintaining.asc
+
+Repository fixture (all in temporary directories, no network):
+  Author : Course Student <student@example.invalid>
+  Branch : main (default)
+  Commits:
+    A – notes.txt  = "alpha\n"
+    B – notes.txt  = "alpha\nbeta\n"   <-- topic branch created here
+    C – todo.txt   = "one\n"           (only on main)
+
+Remote:
+  A second local bare repository initialized with --initial-branch=main
+  Added as "origin" via file:// URL.
+  Simulated GitHub PR ref created at refs/pull/1/head pointing to commit B.
+
+Prerequisites under test:
+  1. Repository state: clean index and working tree (git status --porcelain is empty)
+  2. Current branch: main
+  3. Local configuration: remote.origin.fetch includes "+refs/pull/*/head:refs/remotes/origin/pr/*"
+  4. Isolation: global Git configuration is untouched
+
+Assertions:
+  1. Clean working tree and index on branch main before PR fetch
+  2. Local config includes PR fetch refspec while global config is untouched
+  3. git fetch creates refs/remotes/origin/pr/1 pointing to commit B
+  4. git checkout pr/1 sets current branch to pr/1 pointing to commit B
+  5. Worktree state on pr/1 matches commit B (has notes.txt with beta, lacks todo.txt)
