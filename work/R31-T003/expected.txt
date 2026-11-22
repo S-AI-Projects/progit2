@@ -1,0 +1,13 @@
+Before recovery:
+  main/HEAD remain at C and topic remains at B.
+  notes.txt contains mistakenly staged credentials.
+  The index tree differs from commit C's tree.
+
+After git restore --source=HEAD --staged --worktree -- notes.txt:
+  HEAD, main, topic, and commit ancestry are unchanged.
+  The index tree equals C's saved tree; the worktree is clean.
+  notes.txt is restored to "alpha\nbeta\n"; todo.txt is "one\n".
+
+The restore replaces staged and working-tree content for the named path. It does
+not recover uncommitted text that was never committed, or untracked files.
+Exact object IDs and command results are recorded in actual.txt.
