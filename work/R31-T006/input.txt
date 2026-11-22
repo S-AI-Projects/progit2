@@ -1,0 +1,24 @@
+Task: R31-T006 – Compare two ways to suppress/reveal diff for binary-marked files
+File: book/08-customizing-git/sections/attributes.asc
+
+Repository fixture (all in temporary directories, no network):
+  Author : Course Student <student@example.invalid>
+  Branch : main (default)
+  Commits:
+    A – notes.txt  = "alpha\n"
+    B – notes.txt  = "alpha\nbeta\n"   <-- topic branch created here
+    C – todo.txt   = "one\n"           (only on main)
+
+Special file used in check:
+  "data.lock"  -- a generated/binary-like file marked as binary via .gitattributes
+
+Operations compared:
+  Workflow 1: Mark data.lock as binary via .gitattributes  =>  git diff suppresses output
+  Workflow 2: Same repo, same file, use git diff --text    =>  raw byte diff is shown
+
+Assertions:
+  1. After marking data.lock binary, git diff output contains "Binary files"
+  2. git diff --text on the same change shows the actual changed line
+  3. git show (with binary attribute) also suppresses the diff body
+  4. The .gitattributes attribute is correctly recorded in the index
+  5. Both workflows start from an identical committed state (same tree SHA)
