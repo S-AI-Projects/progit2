@@ -1,0 +1,14 @@
+=== Trial 1 ===
+PASS: refs/heads/main unchanged at commit C after topic push
+PASS: refs/remotes/origin/main unchanged at commit C after topic push
+PASS: bare repo HEAD symref still points to refs/heads/main
+PASS: refs/remotes/origin/topic created and points to commit B
+PASS: topic upstream configured as refs/remotes/origin/topic
+
+=== Trial 2 ===
+PASS: refs/heads/main unchanged at commit C after topic push
+PASS: refs/remotes/origin/main unchanged at commit C after topic push
+PASS: bare repo HEAD symref still points to refs/heads/main
+PASS: refs/remotes/origin/topic created and points to commit B
+PASS: topic upstream configured as refs/remotes/origin/topic
+

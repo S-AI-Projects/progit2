@@ -1,0 +1,14 @@
+=== Trial 1 ===
+PASS: "release notes.txt" absent from diff after quoted stash push
+PASS: "release notes.txt" restored with correct content after stash pop
+PASS: "sample data/" directory removed from working tree after -u stash
+PASS: stash list is empty after stash pop
+PASS: working tree has no staged changes after stash pop
+
+=== Trial 2 ===
+PASS: "release notes.txt" absent from diff after quoted stash push
+PASS: "release notes.txt" restored with correct content after stash pop
+PASS: "sample data/" directory removed from working tree after -u stash
+PASS: stash list is empty after stash pop
+PASS: working tree has no staged changes after stash pop
+

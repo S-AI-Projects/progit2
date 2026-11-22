@@ -1,0 +1,27 @@
+Task: R31-T005 – Handle paths and quoting accurately (git stash push with spaces)
+File: book/07-git-tools/sections/stashing-cleaning.asc
+
+Repository fixture (all in temporary directories, no network):
+  Author : Course Student <student@example.invalid>
+  Branch : main (default)
+  Commits:
+    A – notes.txt  = "alpha\n"
+    B – notes.txt  = "alpha\nbeta\n"   <-- topic branch created here
+    C – todo.txt   = "one\n"           (only on main)
+
+Special paths used in check:
+  "release notes.txt"  -- tracked file with a space in the filename
+  "sample data/"       -- untracked directory with a space in the name
+
+Operations under test:
+  1. git stash push -- "release notes.txt"   (quoted: should succeed)
+  2. git stash pop                            (restore the stash)
+  3. git stash push -u -- "sample data/"     (untracked dir with space)
+  4. Verify that unquoted stash on a space-containing path fails with an error
+
+Assertions:
+  1. After quoted stash, "release notes.txt" is no longer in working-tree diff
+  2. After git stash pop, "release notes.txt" is restored with correct content
+  3. After -u stash, "sample data/" directory is no longer present (stashed)
+  4. Stash list is empty after pop (stash was consumed)
+  5. Working-tree is clean after pop (only untracked sample data remains unstashed)
