@@ -1,0 +1,49 @@
+Run 1
+commit A: 72484e1e91e95f77532cd0d8df46e8a4533cdb18
+commit B: 698f5fc052c85747dbda8570eb977b8282f736d4
+commit C: 8b5bec6cf2dbeac21df819489c27fe6ebaf3622b
+Before checkout topic:
+  HEAD ref: refs/heads/main
+  HEAD commit: 8b5bec6cf2dbeac21df819489c27fe6ebaf3622b
+  main ref: 8b5bec6cf2dbeac21df819489c27fe6ebaf3622b
+  topic ref: 698f5fc052c85747dbda8570eb977b8282f736d4
+  index tree: 70d571a7a75867c09d38254b1252d5e2402adaa6
+  status: ## main
+  index files: ['notes.txt', 'todo.txt']
+  worktree files: ['notes.txt', 'todo.txt']
+Operation: git checkout topic
+After checkout topic:
+  HEAD ref: refs/heads/topic
+  HEAD commit: 698f5fc052c85747dbda8570eb977b8282f736d4
+  main ref: 8b5bec6cf2dbeac21df819489c27fe6ebaf3622b
+  topic ref: 698f5fc052c85747dbda8570eb977b8282f736d4
+  index tree: f85b72cccab2aab0cfca333f78ab1ff302be5f7b
+  status: ## topic
+  index files: ['notes.txt']
+  worktree files: ['notes.txt']
+  todo.txt exists: False
+
+Run 2
+commit A: 72484e1e91e95f77532cd0d8df46e8a4533cdb18
+commit B: 698f5fc052c85747dbda8570eb977b8282f736d4
+commit C: 8b5bec6cf2dbeac21df819489c27fe6ebaf3622b
+Before checkout topic:
+  HEAD ref: refs/heads/main
+  HEAD commit: 8b5bec6cf2dbeac21df819489c27fe6ebaf3622b
+  main ref: 8b5bec6cf2dbeac21df819489c27fe6ebaf3622b
+  topic ref: 698f5fc052c85747dbda8570eb977b8282f736d4
+  index tree: 70d571a7a75867c09d38254b1252d5e2402adaa6
+  status: ## main
+  index files: ['notes.txt', 'todo.txt']
+  worktree files: ['notes.txt', 'todo.txt']
+Operation: git checkout topic
+After checkout topic:
+  HEAD ref: refs/heads/topic
+  HEAD commit: 698f5fc052c85747dbda8570eb977b8282f736d4
+  main ref: 8b5bec6cf2dbeac21df819489c27fe6ebaf3622b
+  topic ref: 698f5fc052c85747dbda8570eb977b8282f736d4
+  index tree: f85b72cccab2aab0cfca333f78ab1ff302be5f7b
+  status: ## topic
+  index files: ['notes.txt']
+  worktree files: ['notes.txt']
+  todo.txt exists: False

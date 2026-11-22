@@ -1,0 +1,13 @@
+Expected before checkout:
+  HEAD is symbolic to refs/heads/main; main is C; topic is B.
+  C has parent B and B has parent A.
+  The index and working tree both contain C's tree (notes.txt, todo.txt).
+  git status --short --branch reports "## main".
+
+Expected after git checkout topic:
+  HEAD becomes symbolic to refs/heads/topic; main remains C; topic is B.
+  The index and working tree are updated to B's tree (notes.txt only; todo.txt removed).
+  git status --short --branch reports "## topic".
+  The working tree and index remain clean with no staged or unstaged diffs.
+
+All commit and tree IDs are collected dynamically. See actual.txt for the exact results.
