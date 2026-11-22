@@ -1,0 +1,5 @@
+PASS: local refs/heads/main created at commit C and refs/heads/topic does not exist
+PASS: remote tracking refs/remotes/origin/topic created and points to commit B
+PASS: clone HEAD points to commit C with a clean working tree and index
+PASS: worktree files match commit C containing notes.txt and todo.txt
+PASS: git branch -a lists active local main and remote tracking branches
