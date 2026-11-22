@@ -1,0 +1,24 @@
+Task: R31-T010 – Add a prediction-and-verification exercise: client p4
+File: book/09-git-and-other-scms/sections/client-p4.asc
+
+Repository fixture (all in temporary directories, no network):
+  Author : Course Student <student@example.invalid>
+  Branch : main (default)
+  Commits:
+    A – notes.txt  = "alpha\n"
+    B – notes.txt  = "alpha\nbeta\n"   <-- topic branch created here
+    C – todo.txt   = "one\n"           (only on main)
+
+Remote:
+  A second local bare repository initialized with --initial-branch=main
+  Both main (commit C) and topic (commit B) pushed to bare repo.
+
+Operation under test:
+  git clone file://<bare_repo> <clone_dir>
+
+Predictions to verify:
+  1. Local branch: refs/heads/main created at commit C; refs/heads/topic does NOT exist locally
+  2. Remote-tracking refs: refs/remotes/origin/main at commit C, refs/remotes/origin/topic at commit B
+  3. HEAD points to refs/heads/main at commit C
+  4. Worktree has notes.txt and todo.txt; index is clean
+  5. git branch -a shows * main and remote refs
