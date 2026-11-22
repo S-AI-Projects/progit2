@@ -1,0 +1,5 @@
+PASS: git merge --abort with no merge in progress exits non-zero
+PASS: error output mentions MERGE_HEAD or "no merge"
+PASS: .git/MERGE_HEAD absent before any merge is started
+PASS: .git/MERGE_HEAD present during active merge conflict
+PASS: git merge --abort during active conflict exits zero (success)

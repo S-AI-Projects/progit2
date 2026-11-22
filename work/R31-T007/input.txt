@@ -1,0 +1,28 @@
+Task: R31-T007 – Explain a real command failure: git merge --abort with no merge in progress
+File: book/07-git-tools/sections/advanced-merging.asc
+Anchors: $ git checkout -b whitespace | $ git commit -am 'Convert hello.rb to DOS' | $ git diff -b
+
+Repository fixture (all in temporary directories, no network):
+  Author : Course Student <student@example.invalid>
+  Branch : main (default)
+  Commits:
+    A – notes.txt  = "alpha\n"
+    B – notes.txt  = "alpha\nbeta\n"   <-- topic branch created here
+    C – todo.txt   = "one\n"           (only on main)
+
+Violated precondition:
+  Running `git merge --abort` when .git/MERGE_HEAD does not exist
+  (no merge in progress) → Git exits non-zero with a fatal error.
+
+Bad case (fails):
+  git merge --abort   # outside a merge conflict → returncode != 0
+
+Repaired case (succeeds):
+  test -f .git/MERGE_HEAD && git merge --abort || echo "No merge to abort"
+
+Assertions:
+  1. git merge --abort with no merge in progress exits non-zero
+  2. The error message mentions MERGE_HEAD or "no merge"
+  3. .git/MERGE_HEAD is absent before any merge is started
+  4. After a real merge conflict, .git/MERGE_HEAD exists (precondition met)
+  5. git merge --abort during an active conflict succeeds (exit 0)
