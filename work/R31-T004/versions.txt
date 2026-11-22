@@ -1,0 +1,6 @@
+Recorded before running the check:
+git version 2.55.0
+Python 3.15.0
+ruby 4.0.6 (2026-07-14 revision 03b6d3f889) [arm64-darwin25]
+Bundler version 4.0.16
+Asciidoctor 2.0.26
