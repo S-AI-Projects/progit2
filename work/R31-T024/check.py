@@ -8,6 +8,9 @@ def run(args,cwd,ok=True):
 with tempfile.TemporaryDirectory(prefix='R31-T024-') as td:
  r=pathlib.Path(td);run(['git','init','-q','-b','main'],r)
  for k,v in [('user.name','Course Student'),('user.email','student@example.invalid')]:run(['git','config',k,v],r)
+ (r/'notes.txt').write_text('alpha\n');run(['git','add','.'],r);run(['git','commit','-qm','A'],r)
+ (r/'notes.txt').write_text('alpha\nbeta\n');run(['git','commit','-qam','B'],r);b=run(['git','rev-parse','HEAD'],r).stdout.strip();run(['git','branch','topic',b],r)
+ (r/'todo.txt').write_text('one\n');run(['git','add','.'],r);run(['git','commit','-qm','C'],r)
  d=r/'sample data';d.mkdir();f=d/'release notes.txt';f.write_text('approved\n')
  run(['git','add','--','sample data/release notes.txt'],r);run(['git','commit','-qm','Add release notes'],r)
  clean_head=run(['git','rev-parse','HEAD'],r).stdout.strip()
