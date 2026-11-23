@@ -1,0 +1,16 @@
+{
+  "inputs": "main=C with todo.txt=one; topic=B; current checkout topic",
+  "expected": "current-tree search has no match; explicit main search finds todo.txt; refs unchanged",
+  "actual": {
+    "current_branch": "topic",
+    "git_grep_one_exit": 1,
+    "git_grep_main_output": "main:todo.txt:one",
+    "main_before_after": "99972daafb9fa3e935293237bc6abeddfe8b6735",
+    "topic_before_after": "f6e762edffeebecfbbb5b9c6dd940c3fe4268bf7",
+    "status": "clean"
+  },
+  "tool_versions": {
+    "git": "git version 2.50.1 (Apple Git-155)",
+    "python": "Python 3.15.2"
+  }
+}
