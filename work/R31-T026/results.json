@@ -1,0 +1,18 @@
+{
+  "inputs": "main with commits A/B/C; invoke gitk with PATH empty then git log fallback",
+  "expected": "missing helper exits 127; text fallback succeeds without changing repository state",
+  "actual": {
+    "trigger": "PATH intentionally hides gitk",
+    "failure_exit": 127,
+    "failure_category": "command not found",
+    "fallback_exit": 0,
+    "fallback_shows_history": true,
+    "head_unchanged": true,
+    "status": "clean"
+  },
+  "tool_versions": {
+    "git": "git version 2.50.1 (Apple Git-155)",
+    "python": "Python 3.15.2",
+    "gitk_discoverable_on_host": "True"
+  }
+}
