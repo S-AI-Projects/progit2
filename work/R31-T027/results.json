@@ -1,0 +1,17 @@
+{
+  "inputs": "topic B creates email patch; main C clean; local committer identity set; git am applies patch",
+  "expected": "only main advances by new commit; patch file is present; final worktree is clean",
+  "actual": {
+    "target_branch": "main",
+    "pre_apply_clean": true,
+    "base_before": "adf3d935d5916757b74fbefe3bbce31d71f45d95",
+    "head_after": "72fd6b2f8e992c6562d6a0b012da89e955ac5159",
+    "review_file": "reviewed patch\n",
+    "status_after": "clean",
+    "commit_identity": "Course Student <student@example.invalid> Course Student <student@example.invalid>"
+  },
+  "tool_versions": {
+    "git": "git version 2.50.1 (Apple Git-155)",
+    "python": "Python 3.15.2"
+  }
+}
