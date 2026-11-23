@@ -1,0 +1,15 @@
+{
+  "inputs": "tracked file with spaces; edit and stage it; restore from main with -- path separator",
+  "expected": "path stays one argument, restore returns committed contents and leaves branch ref unchanged",
+  "actual": {
+    "path": "sample data/release notes.txt",
+    "staged_status": "M  \"sample data/release notes.txt\"",
+    "restored_contents": "approved\n",
+    "head_unchanged": true,
+    "final_status": "clean"
+  },
+  "tool_versions": {
+    "git": "git version 2.50.1 (Apple Git-155)",
+    "python": "Python 3.15.2"
+  }
+}
