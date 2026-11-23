@@ -1,0 +1,20 @@
+{
+  "inputs": "temporary main history A/B/C; update refs/heads/review to captured B; run omitted-command mutation",
+  "expected": "review=B; main=C; log contains A/B/C; omitted update-ref exits nonzero",
+  "actual": {
+    "commit_B": "0e33b63b4bdbaa50e1dea9e0027f015f76baf001",
+    "main_C": "a260a02e72eebb3829da98df9bc3e5ae49114155",
+    "review_ref": "0e33b63b4bdbaa50e1dea9e0027f015f76baf001",
+    "log_main": [
+      "a260a02e72eebb3829da98df9bc3e5ae49114155 C",
+      "0e33b63b4bdbaa50e1dea9e0027f015f76baf001 B",
+      "4641df36723b129848bb7c864cc1ffdf67619c5a A"
+    ],
+    "status": "clean",
+    "omitted_command_exit": 1
+  },
+  "tool_versions": {
+    "git": "git version 2.50.1 (Apple Git-155)",
+    "python": "Python 3.15.2"
+  }
+}
