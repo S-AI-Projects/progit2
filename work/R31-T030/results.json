@@ -1,0 +1,16 @@
+{
+  "inputs": "known-good commit; local user.name saved; tracked settings.txt edited; local setting changed incorrectly; restore file and setting",
+  "expected": "file, tree and local setting match recovery point; global config unchanged",
+  "actual": {
+    "saved_tree": "8f76b4abcffccb4dc2f5f13582c4dd0ac67df08a",
+    "restored_tree": "8f76b4abcffccb4dc2f5f13582c4dd0ac67df08a",
+    "file": "mode=review\n",
+    "user_name_restored": "Course Student",
+    "status": "clean",
+    "global_config_unchanged": true
+  },
+  "tool_versions": {
+    "git": "git version 2.50.1 (Apple Git-155)",
+    "python": "Python 3.15.2"
+  }
+}
