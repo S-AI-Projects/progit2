@@ -1,0 +1,42 @@
+{
+  "inputs": {
+    "branch": "main",
+    "author": "Course Student <student@example.invalid>",
+    "commits": [
+      "A: notes.txt=alpha",
+      "B: notes.txt+=beta",
+      "C: todo.txt=one"
+    ],
+    "clones": [
+      "local path",
+      "file:// URL"
+    ]
+  },
+  "expected": "both clones have identical main HEAD, topic remote ref, files and clean worktree",
+  "actual": {
+    "path_clone": {
+      "head": "1f24a0d4e60f56d076d8f369d55f998f962934b2",
+      "branch": "main",
+      "notes": "alpha\nbeta\n",
+      "todo": "one\n",
+      "origin_topic": "2ce0e61b9c2169901179b29b68216dc3988c7b7c",
+      "status": "clean"
+    },
+    "file_url_clone": {
+      "head": "1f24a0d4e60f56d076d8f369d55f998f962934b2",
+      "branch": "main",
+      "notes": "alpha\nbeta\n",
+      "todo": "one\n",
+      "origin_topic": "2ce0e61b9c2169901179b29b68216dc3988c7b7c",
+      "status": "clean"
+    },
+    "source_commits": {
+      "B": "2ce0e61b9c2169901179b29b68216dc3988c7b7c",
+      "C": "1f24a0d4e60f56d076d8f369d55f998f962934b2"
+    }
+  },
+  "tool_versions": {
+    "git": "git version 2.50.1 (Apple Git-155)",
+    "python": "Python 3.15.2"
+  }
+}
