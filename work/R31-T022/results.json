@@ -1,10 +1,11 @@
 {
-  "inputs": "commit C; stage notes.txt v2; leave v3 unstaged",
+  "inputs": "commits A/B/C; topic at B; stage notes.txt v2; leave v3 unstaged",
   "expected": "HEAD unchanged; index contains v2; worktree contains v3; status MM",
   "actual": {
     "branch": "main",
-    "head": "337a59047ebc299469d0bcdbacab26a30a8bee42",
-    "index_tree": "8a50c72044cb8ffae570923ec4094ba4cfce8bec",
+    "head": "053821141e7edb16f02da66c8414e63fdf01f4dc",
+    "topic": "ffaf4208e8b06a2113aa2674bae43bd834b7ce0f",
+    "index_tree": "d75dac60b6e1c79ad4b271f63c6046ef999c5c7a",
     "index_blob": "f6f8433812a5697e575d5720bdd4c543ebbd368e",
     "status": "MM notes.txt",
     "working_file": "alpha\nbeta\nv3\n"
