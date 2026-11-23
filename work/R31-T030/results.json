@@ -2,8 +2,8 @@
   "inputs": "known-good commit; local user.name saved; tracked settings.txt edited; local setting changed incorrectly; restore file and setting",
   "expected": "file, tree and local setting match recovery point; global config unchanged",
   "actual": {
-    "saved_tree": "8f76b4abcffccb4dc2f5f13582c4dd0ac67df08a",
-    "restored_tree": "8f76b4abcffccb4dc2f5f13582c4dd0ac67df08a",
+    "saved_tree": "5ce07834576386dea6988c8b1700750db725f613",
+    "restored_tree": "5ce07834576386dea6988c8b1700750db725f613",
     "file": "mode=review\n",
     "user_name_restored": "Course Student",
     "status": "clean",
