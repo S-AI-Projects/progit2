@@ -1,0 +1,19 @@
+{
+  "inputs": "main=C; topic=B; git reset --mixed B",
+  "expected": "main and index move to B; worktree keeps todo.txt; todo is untracked; topic unchanged",
+  "actual": {
+    "main_before": "b599f9a7dfad9cf3cc3edff481da045a03438d71",
+    "main_after": "c64a57dfe9f5f0c2315f4facc7e605c3e416eac5",
+    "index_tree": "f85b72cccab2aab0cfca333f78ab1ff302be5f7b",
+    "B_tree": "f85b72cccab2aab0cfca333f78ab1ff302be5f7b",
+    "head_tree": "f85b72cccab2aab0cfca333f78ab1ff302be5f7b",
+    "ls_tree_HEAD": "100644 blob fbbee861521bd5355538b096fa3998541cd33909\tnotes.txt",
+    "todo_worktree": "one\n",
+    "status": "?? todo.txt",
+    "topic": "c64a57dfe9f5f0c2315f4facc7e605c3e416eac5"
+  },
+  "tool_versions": {
+    "git": "git version 2.50.1 (Apple Git-155)",
+    "python": "Python 3.15.2"
+  }
+}
